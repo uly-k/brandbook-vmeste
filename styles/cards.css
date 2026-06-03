@@ -1,0 +1,828 @@
+/* ========================================
+   CARDS.CSS
+   ======================================== */
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-300);
+  transition: all var(--transition-normal);
+  height: 380px; /* Фиксированная высота, а не min-height */
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--light-blue);
+}
+
+.brand-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Важно: занимает всю высоту родителя */
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+/* Группа для заголовка + описания (растягивается, чтобы прижать кнопку) */
+.brand-card__text-group {
+  flex: 1;
+}
+
+.brand-card__title {
+  font-size: var(--h4);
+  font-weight: var(--fw-regular);
+  margin-bottom: var(--space-16);
+  color: var(--blue);
+}
+
+.brand-card__description {
+  font-size: var(--body);
+  color: var(--gray-900);
+  line-height: var(--lh-tight);
+}
+
+.brand-card__description p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.brand-card__example {
+  background-color: var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: var(--space-12);
+  margin-top: var(--space-16);
+  text-align: center;
+  font-size: var(--body-small);
+}
+
+/* ===== МЕДИА-КАРТОЧКИ (только фото/изображение) ===== */
+.brand-card--media {
+  padding: 0;
+  overflow: hidden;
+  height: 380px;
+}
+
+.brand-card--media .brand-card__media {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brand-card--media .brand-card__media img,
+.brand-card--media .brand-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.brand-card--media:hover .brand-card__media img,
+.brand-card--media:hover .brand-card__media video {
+  transform: scale(1.02);
+}
+
+/* Медиа-карточка с подписью */
+.brand-card--media-caption {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  height: 380px;
+}
+
+.brand-card--media-caption .brand-card__media {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brand-card--media-caption .brand-card__media img,
+.brand-card--media-caption .brand-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-card--media-caption .brand-card__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: var(--space-24) var(--space-20) var(--space-16);
+  color: var(--white);
+}
+
+.brand-card--media-caption .brand-card__caption-title {
+  font-size: var(--h4);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--white);
+}
+
+.brand-card--media-caption .brand-card__caption-text {
+  font-size: var(--body-small);
+  opacity: 0.9;
+  margin: 0;
+  color: var(--white);
+}
+
+/* Медиа-карточка с затемнением */
+.brand-card--media-overlay {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  height: 380px;
+}
+
+.brand-card--media-overlay .brand-card__media {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brand-card--media-overlay .brand-card__media img,
+.brand-card--media-overlay .brand-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-card--media-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity var(--transition-normal);
+  opacity: 0;
+}
+
+.brand-card--media-overlay:hover::after {
+  opacity: 1;
+}
+
+/* ===== ЦВЕТОВЫЕ ПОДКЛАССЫ ДЛЯ КАРТОЧЕК ===== */
+
+/* Синяя карточка */
+.brand-card--blue {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.brand-card--blue .brand-card__title {
+  color: var(--white);
+}
+
+.brand-card--blue .brand-card__description {
+  color: var(--white);
+}
+
+.brand-card--blue .brand-card__description p {
+  color: var(--white);
+}
+
+.brand-card--blue .brand-card__example {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.brand-card--blue .card-toggle__btn {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.brand-card--blue .card-toggle__btn svg path {
+  stroke: var(--white);
+}
+
+.brand-card--blue .card-toggle__btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Светло-голубая карточка */
+.brand-card--light-blue {
+  background-color: var(--light-blue);
+  border-color: var(--light-blue);
+}
+
+.brand-card--light-blue .brand-card__title {
+  color: var(--blue);
+}
+
+.brand-card--light-blue .brand-card__description {
+  color: var(--gray-700);
+}
+
+.brand-card--light-blue .brand-card__example {
+  background-color: var(--white);
+}
+
+/* Зеленая карточка */
+.brand-card--green {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.brand-card--green .brand-card__title {
+  color: var(--black);
+}
+
+.brand-card--green .brand-card__description {
+  color: var(--black);
+}
+
+.brand-card--green .brand-card__description p {
+  color: var(--black);
+}
+
+.brand-card--green .brand-card__example {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--black);
+}
+
+.brand-card--green .card-toggle__btn {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.brand-card--green .card-toggle__btn svg path {
+  stroke: var(--black);
+}
+
+.brand-card--green .card-toggle__btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Черная карточка */
+.brand-card--dark {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.brand-card--dark .brand-card__title {
+  color: var(--white);
+}
+
+.brand-card--dark .brand-card__description {
+  color: var(--gray-300);
+}
+
+.brand-card--dark .brand-card__description p {
+  color: var(--gray-300);
+}
+
+.brand-card--dark .brand-card__example {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.brand-card--dark .card-toggle__btn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.brand-card--dark .card-toggle__btn svg path {
+  stroke: var(--white);
+}
+
+.brand-card--dark .card-toggle__btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Серая карточка */
+.brand-card--gray {
+  background-color: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+.brand-card--gray .brand-card__title {
+  color: var(--gray-900);
+}
+
+/* Желтая/акцентная карточка */
+.brand-card--accent {
+  background-color: #FFD166;
+  border-color: #FFD166;
+}
+
+.brand-card--accent .brand-card__title {
+  color: var(--black);
+}
+
+.brand-card--accent .brand-card__description {
+  color: var(--black);
+}
+
+.brand-card--accent .brand-card__example {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--black);
+}
+
+/* Широкая карточка (на 2 колонки) */
+.brand-card--wide {
+  grid-column: span 2;
+}
+
+/* Цветовые карточки */
+.color-card__preview {
+  height: 80px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-16);
+}
+
+.color-card__hex {
+  font-family: var(--font-mono);
+  font-size: var(--body-small);
+  background-color: var(--gray-100);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-top: var(--space-8);
+}
+
+/* Типографические карточки */
+.typo-card__preview {
+  font-family: var(--font-primary);
+  font-size: var(--h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-16);
+  padding: var(--space-12);
+  background-color: var(--gray-100);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.typo-card__details {
+  font-family: var(--font-mono);
+  font-size: var(--body-small);
+  color: var(--gray-500);
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+/* Радиусы для демо */
+.radius-demo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-blue);
+  margin-right: var(--space-8);
+}
+
+.radius-demo.radius-8 { border-radius: 8px; }
+.radius-demo.radius-16 { border-radius: 16px; }
+.radius-demo.radius-24 { border-radius: 24px; }
+
+/* ===== СЕТКА ДЛЯ КАРТОЧЕК КОНЦЕПЦИИ ===== */
+.concept-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  margin-top: var(--space-32);
+}
+
+/* Когда меню ЗАКРЫТО (сайдбар скрыт) — 3 колонки */
+.sidebar.is-closed ~ .main-content .concept-cards-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== СЕТКА ДЛЯ ОСТАЛЬНЫХ КАРТОЧЕК (Визуал) ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: var(--space-48);
+}
+
+/* Когда меню ЗАКРЫТО — 3 колонки */
+.sidebar.is-closed ~ .main-content .cards-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Адаптация широкой карточки при закрытом меню */
+.sidebar.is-closed ~ .main-content .brand-card--wide {
+  grid-column: span 2;
+}
+
+/* ===== КАРТОЧКИ С ВОЗМОЖНОСТЬЮ СВЕРНУТЬ/РАЗВЕРНУТЬ ===== */
+.collapsible-card {
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+/* Когда карточка свёрнута */
+.collapsible-card.is-collapsed .brand-card__description {
+  display: none;
+}
+
+/* Кнопка-стрелочка внутри карточки — ПРИЖИМАЕТСЯ К НИЗУ */
+.card-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto; /* ЭТО ГЛАВНОЕ — прижимает кнопку к низу */
+  padding-top: var(--space-16);
+}
+
+.card-toggle__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.card-toggle__btn:hover {
+  background-color: var(--light-blue);
+  transform: scale(1.05);
+}
+
+.card-toggle__btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-normal);
+}
+
+.card-toggle__btn svg path {
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+/* Когда карточка развёрнута — стрелочка смотрит вверх */
+.collapsible-card:not(.is-collapsed) .card-toggle__btn svg {
+  transform: rotate(180deg);
+}
+
+/* Анимация появления */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-card {
+  animation: cardFadeIn 0.4s ease forwards;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1156px) {
+  .brand-card {
+    height: 360px;
+    padding: var(--space-20);
+  }
+  
+  .brand-card--wide {
+    grid-column: span 1;
+  }
+  
+  .brand-card--media,
+  .brand-card--media-caption,
+  .brand-card--media-overlay {
+    height: 360px;
+  }
+  
+  .concept-cards-grid,
+  .cards-grid,
+  .sidebar.is-closed ~ .main-content .concept-cards-grid,
+  .sidebar.is-closed ~ .main-content .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 756px) {
+  .brand-card {
+    height: auto;
+    min-height: 300px;
+    padding: var(--space-16);
+  }
+  
+  .brand-card__title {
+    font-size: var(--body);
+    margin-bottom: var(--space-12);
+  }
+  
+  .color-card__preview {
+    height: 50px;
+  }
+  
+  .brand-card--wide {
+    grid-column: span 1;
+  }
+  
+  .brand-card--media,
+  .brand-card--media-caption,
+  .brand-card--media-overlay {
+    height: 240px;
+  }
+  
+  .brand-card--media-caption .brand-card__caption {
+    padding: var(--space-16);
+  }
+  
+  .brand-card--media-caption .brand-card__caption-title {
+    font-size: var(--body);
+  }
+  
+  .concept-cards-grid,
+  .cards-grid,
+  .sidebar.is-closed ~ .main-content .concept-cards-grid,
+  .sidebar.is-closed ~ .main-content .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-toggle__btn {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .card-toggle__btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ===== КАРТОЧКИ С ВОЗМОЖНОСТЬЮ СВЕРНУТЬ/РАЗВЕРНУТЬ ===== */
+
+/* Хедер карточки: заголовок + кнопка в одной строке */
+.brand-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-16);
+}
+
+.brand-card__header .brand-card__title {
+  margin-bottom: 0; /* Убираем отступ, так как он есть у родителя */
+}
+
+.collapsible-card {
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+/* Когда карточка свёрнута */
+.collapsible-card.is-collapsed .brand-card__description {
+  display: none;
+}
+
+/* Кнопка-стрелочка */
+.card-toggle {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.card-toggle__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.card-toggle__btn:hover {
+  background-color: var(--light-blue);
+  transform: scale(1.05);
+}
+
+.card-toggle__btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-normal);
+}
+
+.card-toggle__btn svg path {
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+/* Когда карточка развёрнута — стрелочка смотрит вверх */
+.collapsible-card:not(.is-collapsed) .card-toggle__btn svg {
+  transform: rotate(180deg);
+}
+
+
+
+/* Эффект при наведении — подложка как маркер */
+/* ===== СЛОГАН С АНИМАЦИЕЙ ===== */
+.slogan-card {
+    background-color: var(--white);
+}
+
+.slogan-text {
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: var(--fw-regular); /* regular начертание */
+    color: var(--black); /* черный цвет */
+    margin: 0;
+    animation: sloganAppear 0.8s ease-out;
+    transition: all var(--transition-normal);
+    display: inline-block;
+    position: relative;
+    padding: 0; /* без отступов изначально */
+    background: transparent;
+}
+
+/* Анимация появления */
+@keyframes sloganAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Эффект при наведении — зеленый фон как маркер */
+.slogan-text:hover {
+    color: var(--black); /* остается черным */
+    background-color: var(--green); /* зеленый фон */
+    padding: 0.1em 0.3em; /* небольшие отступы слева и справа */
+    border-radius: 4px; /* легкое скругление, как у маркера */
+}
+
+/* Анимация карточек при появлении */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация слогана при появлении */
+@keyframes sloganAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Убираем анимацию по умолчанию, теперь она будет через JS */
+.brand-card {
+    opacity: 0; /* скрыты изначально */
+}
+
+.slogan-text {
+    opacity: 0; /* скрыт изначально */
+}
+
+/* ===== СВОРАЧИВАНИЕ ЦЕЛЫХ РЯДОВ ===== */
+
+/* Состояние свёрнутой карточки в ряду */
+.brand-card.is-collapsed-row {
+    height: 80px; /* Минимальная высота — только заголовок */
+    min-height: 80px;
+}
+
+/* Скрываем описание у текстовых карточек */
+.brand-card.is-collapsed-row .brand-card__description {
+    display: none;
+}
+
+/* Скрываем медиа-контент у медиа-карточек */
+.brand-card.is-collapsed-row .brand-card__media {
+    display: none;
+}
+
+/* Скрываем SVG-контент и прочее (если внутри brand-card__content что-то кроме header) */
+.brand-card.is-collapsed-row .brand-card__content > *:not(.brand-card__header) {
+    display: none;
+}
+
+/* У карточек с цветным фоном оставляем фон */
+.brand-card.is-collapsed-row.brand-card--blue,
+.brand-card.is-collapsed-row.brand-card--green,
+.brand-card.is-collapsed-row.brand-card--dark,
+.brand-card.is-collapsed-row.brand-card--light-blue,
+.brand-card.is-collapsed-row.brand-card--gray,
+.brand-card.is-collapsed-row.brand-card--accent {
+    background-color: inherit; /* сохраняем цвет */
+}
+
+/* Чтобы кнопка оставалась видимой в свёрнутом состоянии */
+.brand-card.is-collapsed-row .brand-card__header {
+    margin-bottom: 0;
+}
+
+.brand-card.is-collapsed-row .card-toggle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Адаптация для планшета */
+@media (max-width: 1156px) {
+    .brand-card.is-collapsed-row {
+        height: 70px;
+        min-height: 70px;
+    }
+}
+
+/* Адаптация для мобилки */
+@media (max-width: 756px) {
+    .brand-card.is-collapsed-row {
+        height: 60px;
+        min-height: 60px;
+    }
+}
+
+
+/* ===== СВОРАЧИВАНИЕ РАЗДЕЛОВ ===== */
+
+/* Хедер раздела с заголовком и кнопкой */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-24);
+    cursor: pointer;
+}
+
+.section-header h3 {
+    margin-bottom: 0;
+}
+
+/* Кнопка-стрелка */
+.section-toggle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background-color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.section-toggle-btn:hover {
+    background-color: var(--light-blue);
+    transform: scale(1.05);
+}
+
+.section-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-normal);
+}
+
+.section-toggle-btn svg path {
+    stroke: var(--blue);
+    stroke-width: 2;
+}
+
+/* Когда раздел свёрнут — стрелка поворачивается */
+.section-collapsible.is-collapsed .section-toggle-btn svg {
+    transform: rotate(180deg);
+}
+
+/* Контент раздела (карточки) — с анимацией */
+.section-content {
+    overflow: hidden;
+    transition: all var(--transition-slow);
+}
+
+/* Когда раздел свёрнут — скрываем контент */
+.section-collapsible.is-collapsed .section-content {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Когда раздел развёрнут — показываем контент */
+.section-collapsible:not(.is-collapsed) .section-content {
+    opacity: 1;
+    visibility: visible;
+    max-height: 5000px; /* Достаточно для любого контента */
+}

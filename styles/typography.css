@@ -1,0 +1,68 @@
+/* ========================================
+   TYPOGRAPHY.CSS
+   ======================================== */
+
+h1, .h1 {
+  font-family: var(--font-primary);
+  font-size: var(--h1);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-24) 0;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-family: var(--font-primary);
+  font-size: var(--h2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-20) 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-primary);
+  font-size: var(--h3);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-16) 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-primary);
+  font-size: var(--h4);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  margin: 0 0 var(--space-12) 0;
+}
+
+p {
+  font-family: var(--font-primary);
+  font-size: var(--body);
+  line-height: var(--lh-normal);
+  margin: 0 0 var(--space-16) 0;
+  color: var(--gray-900);
+}
+
+.text-small {
+  font-size: var(--body-small);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}

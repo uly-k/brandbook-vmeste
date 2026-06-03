@@ -1,0 +1,339 @@
+/* ========================================
+   BRANDBOOK.CSS
+   ======================================== */
+
+/* Hero секция */
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background: var(--gradient-main);
+  margin-bottom: var(--space-48);
+}
+
+.hero__content {
+  text-align: center;
+  padding: var(--space-64) 0;
+}
+
+.hero__title {
+  font-size: clamp(64px, 12vw, 160px);
+  font-weight: var(--fw-bold);
+  color: var(--blue);
+  margin-bottom: var(--space-16);
+}
+
+.hero__subtitle {
+  font-size: var(--h3);
+  color: var(--gray-700);
+  margin-bottom: var(--space-32);
+}
+
+.hero__line {
+  width: 80px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto var(--space-32) auto;
+}
+
+.hero__desc {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: var(--body);
+  color: var(--gray-700);
+  line-height: var(--lh-loose);
+}
+
+/* Разделители */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue) 0px,
+    var(--blue) 9px,
+    transparent 9px,
+    transparent 18px
+  );
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-8);
+}
+
+/* ========================================
+   ТЕКСТОВЫЕ БЛОКИ ДЛЯ КОНЦЕПЦИИ
+   ======================================== */
+
+.text-block {
+    background-color: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-300);
+    padding: var(--space-24);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-block:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--light-blue);
+}
+
+.text-block h4 {
+    color: var(--blue);
+    margin-bottom: var(--space-16);
+    font-size: var(--h4);
+}
+
+.text-block p {
+    color: var(--gray-700);
+    line-height: var(--lh-loose);
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* Адаптив */
+@media (max-width: 756px) {
+    .text-block {
+        padding: var(--space-16);
+    }
+    
+    .text-block h4 {
+        font-size: var(--body);
+        margin-bottom: var(--space-12);
+    }
+}
+/* Заголовки секций */
+.section-concept h2,
+.section-visual h2 {
+  margin-bottom: var(--space-8);
+}
+
+.section-concept h3,
+.section-visual h3 {
+  color: var(--blue);
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-8);
+  border-bottom: 2px solid var(--light-blue);
+  display: inline-block;
+}
+
+/* Отступы для секций */
+.section-visual {
+  margin-bottom: var(--space-80);
+}
+
+/* Адаптив для текстовых блоков */
+@media (max-width: 756px) {
+  .text-block {
+    padding: var(--space-16);
+  }
+  
+  .hero {
+    min-height: 40vh;
+  }
+}
+
+/* ========================================
+   АККОРДЕОН ДЛЯ ТЕКСТОВЫХ БЛОКОВ
+   ======================================== */
+
+/* Контейнер для аккордеонных блоков (сетка) */
+.accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+}
+
+/* Каждый текстовый блок — аккордеон */
+.accordion-block {
+    background-color: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-300);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+    height: fit-content;
+}
+
+.accordion-block:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--light-blue);
+}
+
+/* Заголовок аккордеона (кликабельный) */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-24);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background-color: var(--gray-100);
+}
+
+.accordion-header h4 {
+    margin: 0;
+    color: var(--blue);
+    font-size: var(--h4);
+}
+
+/* Иконка стрелки */
+.accordion-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.accordion-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.accordion-icon svg path {
+    stroke: var(--blue);
+    stroke-width: 2;
+}
+
+/* Поворот иконки при открытии */
+.accordion-block.open .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Контент аккордеона */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+    padding: 0 var(--space-24);
+}
+
+.accordion-block.open .accordion-content {
+    max-height: 500px; /* Достаточно для любого текста */
+    padding: 0 var(--space-24) var(--space-24) var(--space-24);
+}
+
+.accordion-content p {
+    margin: 0;
+    color: var(--gray-700);
+    line-height: var(--lh-loose);
+}
+
+/* Адаптив для аккордеона */
+@media (max-width: 1156px) {
+    .accordion-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 756px) {
+    .accordion-header {
+        padding: var(--space-16);
+    }
+    
+    .accordion-header h4 {
+        font-size: var(--body);
+    }
+    
+    .accordion-block.open .accordion-content {
+        padding: 0 var(--space-16) var(--space-16) var(--space-16);
+    }
+}
+
+/* ========================================
+   РЯДЫ С ВОЗМОЖНОСТЬЮ СВЕРНУТЬ/РАЗВЕРНУТЬ
+   ======================================== */
+
+/* Каждый ряд - это отдельный блок */
+.collapsible-row {
+    margin-bottom: var(--space-32);
+    border-radius: var(--radius-xl);
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+/* Заголовок ряда (кликабельный) */
+.row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-20) var(--space-24);
+    cursor: pointer;
+    background-color: var(--white);
+    transition: background-color var(--transition-fast);
+    user-select: none;
+}
+
+.row-header:hover {
+    background-color: var(--gray-100);
+}
+
+.row-header h3 {
+    margin: 0;
+    color: var(--blue);
+    font-size: var(--h3);
+}
+
+.row-header h3 span {
+    font-size: var(--body);
+    color: var(--gray-500);
+    margin-left: var(--space-12);
+    font-weight: var(--fw-regular);
+}
+
+/* Иконка стрелки */
+.row-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.row-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.row-icon svg path {
+    stroke: var(--blue);
+    stroke-width: 2;
+}
+
+/* Поворот иконки при открытии */
+.collapsible-row.open .row-icon {
+    transform: rotate(180deg);
+}
+
+/* Контент ряда (сетка с карточками) */
+.row-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+    padding: 0 var(--space-24);
+}
+
+.collapsible-row.open .row-content {
+    max-height: 2000px; /* Достаточно для любого контента */
+    padding: 0 var(--space-24) var(--space-24) var(--space-24);
+}
+
+/* Адаптив */
+@media (max-width: 756px) {
+    .row-header {
+        padding: var(--space-16);
+    }
+    
+    .row-header h3 {
+        font-size: var(--h4);
+    }
+    
+    .collapsible-row.open .row-content {
+        padding: 0 var(--space-16) var(--space-16) var(--space-16);
+    }
+}
