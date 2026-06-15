@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Брендбук | (в)месте — инклюзивное пространство</title>
+    <!-- Подключение CSS файлов -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/brandbook.css">
+    <link rel="stylesheet" href="styles/cards_media_additions.css">
+</head>
+<body>
+    
+<!-- HERO БЛОК БРЕНДБУКА -->
+<section class="brandbook-hero">
+    <div class="brandbook-hero__inner">
+        <div class="brandbook-hero__content">
+            <h1 class="brandbook-hero__title">цифровое руководство<br>бренда</h1>
+            <button class="btn btn--primary brandbook-hero__btn" id="startBtn" onclick="document.getElementById('concept').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                начать
+            </button>
+        </div>
+        <div class="brandbook-hero__svg">
+            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="180" stroke="#0077FF" stroke-width="2" stroke-dasharray="10 10" fill="none"/>
+                <circle cx="200" cy="200" r="140" fill="#BEF655" opacity="0.3"/>
+                <circle cx="200" cy="200" r="100" fill="#0077FF" opacity="0.1"/>
+                <path d="M200 80 L220 150 L280 150 L235 190 L255 260 L200 220 L145 260 L165 190 L120 150 L180 150 Z" fill="#0077FF" opacity="0.8"/>
+                <circle cx="200" cy="200" r="30" fill="#FFFFFF"/>
+                <path d="M185 195 L200 210 L215 195" stroke="#0077FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M200 210 L200 180" stroke="#0077FF" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
+    <div class="brandbook-hero__decor">
+        <div class="brandbook-hero__circle brandbook-hero__circle--1"></div>
+        <div class="brandbook-hero__circle brandbook-hero__circle--2"></div>
+        <div class="brandbook-hero__circle brandbook-hero__circle--3"></div>
+        <div class="brandbook-hero__dashed"></div>
+    </div>
+</section>
+
+</body>
+</html>

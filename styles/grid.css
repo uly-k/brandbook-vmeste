@@ -2,7 +2,6 @@
    GRID.CSS
    ======================================== */
 
-/* Общий контейнер для страницы */
 .page-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -13,7 +12,6 @@
   padding: 0 var(--container-padding);
 }
 
-/* Сайдбар — по умолчанию открыт на десктопе */
 .sidebar {
   grid-column: span 4;
   position: sticky;
@@ -24,53 +22,54 @@
   transition: all var(--transition-normal);
 }
 
-/* Когда сайдбар закрыт на десктопе */
 .sidebar.is-closed {
   grid-column: span 0;
   display: none;
 }
 
-/* Основной контент — по умолчанию занимает 8 колонок */
 .main-content {
   grid-column: span 8;
   transition: all var(--transition-normal);
 }
 
-/* Когда сайдбар закрыт — контент занимает 12 колонок */
 .sidebar.is-closed ~ .main-content {
   grid-column: span 12;
 }
 
-/* Сетка карточек (2 колонки, так как основная область 8 колонок) */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--grid-gap);
 }
 
-/* Когда сайдбар закрыт — карточек становится 3 в ряд */
 .sidebar.is-closed ~ .main-content .cards-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Текстовые блоки на всю ширину */
 .full-width {
   grid-column: 1 / -1;
 }
 
-/* Утилиты */
 .span-12 { grid-column: span 12; }
 .span-8 { grid-column: span 8; }
 .span-6 { grid-column: span 6; }
 .span-4 { grid-column: span 4; }
 
-/* Отступы для секций */
 .layout-section {
   padding-top: clamp(60px, 8vw, 120px);
   padding-bottom: clamp(60px, 8vw, 120px);
 }
 
-/* ===== ПЛАНШЕТ (меню становится выезжающим) ===== */
+.text-blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.sidebar.is-closed ~ .main-content .text-blocks-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 @media (max-width: 1156px) {
   .page-container {
     display: block;
@@ -103,92 +102,28 @@
     width: 100%;
   }
   
-  .cards-grid {
+  .cards-grid,
+  .text-blocks-grid,
+  .sidebar.is-closed ~ .main-content .cards-grid,
+  .sidebar.is-closed ~ .main-content .text-blocks-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 756px) {
+  .page-container {
+    padding: 0 var(--space-16);
   }
   
+  .cards-grid,
+  .text-blocks-grid,
   .sidebar.is-closed ~ .main-content .cards-grid,
-  .sidebar.is-open-mobile ~ .main-content .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .sidebar.is-closed ~ .main-content .text-blocks-grid {
+    grid-template-columns: 1fr !important;
   }
-}
-
-/* ===== МОБИЛКА ===== */
-@media (max-width: 756px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
+  
+  .layout-section {
+    padding-top: var(--space-48);
+    padding-bottom: var(--space-48);
   }
-}
-
-
-/* ========================================
-   СЕТКА ДЛЯ ТЕКСТОВЫХ БЛОКОВ (КОНЦЕПЦИЯ)
-   ======================================== */
-
-/* Сетка для текстовых блоков — по умолчанию 2 колонки (меню открыто) */
-.text-blocks-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--grid-gap);
-}
-
-/* Когда меню закрыто — текстовые блоки в 3 колонки */
-.sidebar.is-closed ~ .main-content .text-blocks-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* Планшет */
-@media (max-width: 1156px) {
-    .text-blocks-grid,
-    .sidebar.is-closed ~ .main-content .text-blocks-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Мобилка */
-@media (max-width: 756px) {
-    .text-blocks-grid,
-    .sidebar.is-closed ~ .main-content .text-blocks-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* Общий контейнер для страницы */
-.page-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--grid-gap);
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-/* Сайдбар — по умолчанию открыт на десктопе */
-.sidebar {
-  grid-column: span 4;
-  position: sticky;
-  top: 0;
-  align-self: start;
-  height: 100vh;
-  overflow-y: auto;
-  transition: all var(--transition-normal);
-}
-
-/* Когда сайдбар закрыт на десктопе */
-.sidebar.is-closed {
-  grid-column: span 0;
-  display: none;
-}
-
-/* Основной контент — по умолчанию занимает 8 колонок */
-.main-content {
-  grid-column: span 8;
-  transition: all var(--transition-normal);
-}
-
-/* Когда сайдбар закрыт — контент занимает 12 колонок */
-.sidebar.is-closed ~ .main-content {
-  grid-column: span 12;
 }

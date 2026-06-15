@@ -13,17 +13,39 @@
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/brandbook.css">
+    <link rel="stylesheet" href="styles/cards_media_additions.css">
 </head>
 <body>
+
+    <!-- HERO БЛОК БРЕНДБУКА -->
+<section class="hero brandbook-hero">
+    
+    <div class="hero__content">
+        <h2 class="brandbook-hero__title">
+            цифровое руководство<br>бренда
+        </h2>
+
+        <button class="btn btn--primary brandbook-hero__btn" onclick="document.getElementById('concept').scrollIntoView({ behavior: 'smooth', block: 'start' });">
+            начать
+        </button>
+    </div>
+
+    <div class="hero__title">
+        <img src="media/vmeste.svg" alt="(в)месте">
+    </div>
+
+    <!-- декоративные круги -->
+    <div class="hero__circle hero__circle--1"></div>
+    <div class="hero__circle hero__circle--2"></div>
+    <div class="hero__circle hero__circle--3"></div>
+    <div class="hero__circle hero__circle--4"></div>
+
+</section>
 
 <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
 <div class="page-container">
     
-<!-- БОКОВОЕ МЕНЮ (САЙДБАР) -->
     <!-- БОКОВОЕ МЕНЮ (САЙДБАР) -->
-    <!-- БОКОВОЕ МЕНЮ (САЙДБАР) -->
-<!-- БОКОВОЕ МЕНЮ (САЙДБАР) -->
-<!-- БОКОВОЕ МЕНЮ (САЙДБАР) -->
     <aside class="sidebar">
         <div class="sidebar__inner">
             <!-- Кнопка закрытия (крестик) -->
@@ -78,17 +100,7 @@
     <!-- ОСНОВНОЙ КОНТЕНТ -->
     <main class="main-content">
         
-        <!-- HERO / ОБЛОЖКА -->
-        <section class="hero">
-            <div class="hero__content">
-                <h1 class="hero__title">(в)месте</h1>
-                <p class="hero__subtitle">инклюзивное пространство</p>
-                <div class="hero__line"></div>
-                <p class="hero__desc">Брендбук инклюзивного пространства (в)месте — это система принципов, смыслов и визуально-текстовых решений, которая помогает сохранять целостность бренда во всех точках контакта.</p>
-            </div>
-        </section>
-        
-<!-- СЕКЦИЯ: КОНЦЕПЦИЯ -->
+        <!-- СЕКЦИЯ: КОНЦЕПЦИЯ -->
         <section id="concept" class="section-concept">
             <div class="layout-section">
                 
@@ -223,9 +235,9 @@
                         <div class="concept-cards-grid">
                             
                             <!-- Гифка на зеленом фоне -->
-                            <div class="brand-card brand-card--green brand-card--media" id="naming-gif">
+                            <div class="brand-card brand-card--mediacent" id="naming-gif">
                                 <div class="brand-card__media">
-                                    
+                                    <img src="media/logo.gif" alt="">
                                 </div>
                             </div>
                             
@@ -267,24 +279,12 @@
                                 </div>
                             </div>
                             
-                            <!-- Креативная концепция -->
-                            <div class="brand-card collapsible-card" id="creative-concept">
-                                <div class="brand-card__content">
-                                    <div class="brand-card__header">
-                                        <div class="brand-card__title">Креативная концепция</div>
-                                    </div>
-                                    <div class="brand-card__description">
-                                        <p>Креативная концепция бренда строится на метафоре «быть в месте, где ты свой». Визуальный язык сочетает понятную типографику, дружелюбные скругления и живые акценты. Цвета работают как сигналы: синий — спокойствие и доверие, зелёный — жизнь и рост, белый — пространство для каждого. Скобка становится не просто знаком, а приглашением войти.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
 
                 <!-- РАЗДЕЛ: позиционирование и аудитория -->
-                <div class="section-collapsible" style="margin-top: var(--space-64);">
+                <div class="section-collapsible" id="positioning-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
                         <h3>позиционирование и аудитория</h3>
                         <button class="section-toggle-btn">
@@ -294,12 +294,233 @@
                         </button>
                     </div>
                     <div class="section-content">
-                        <!-- Здесь будут карточки -->
+                        <div class="concept-cards-grid">
+                            <!-- Здесь будут карточки -->
+                            <div class="brand-card collapsible-card brand-card--green" id="positioning">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Позиционирование</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>(в)месте обещает безопасную среду, где нейроотличный человек может быть собой без масок и перегрузок.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="brand-card collapsible-card" id="advantage-1">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Преимущество</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p style="font-size: var(--h3); line-height: var(--lh-tight); font-weight: var(--fw-regular);">1 сенсорный комфорт <br>без перегрузок</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card collapsible-card" id="advantage-2">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Преимущество</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p style="font-size: var(--h3); line-height: var(--lh-tight); font-weight: var(--fw-regular);">2 безопасность <br>без масок</p>
+                                    </div>
+                                </div>
+                            </div>   
+
+                            <div class="brand-card collapsible-card" id="target-audience">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Целевая аудитория</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Целевая аудитория инклюзивного пространства «(в)месте» — это прежде всего нейроотличные молодые люди в возрасте 20–25 лет, которые сталкиваются с трудностями социализации, самоопределения и поиска безопасной среды.</p>
+                                    </div>
+                                </div>
+                            </div>   
+
+                            <!-- Карточка ЦА с переключателями (широкая) -->
+                            <div class="brand-card brand-card--wide brand-card--audience" id="audience-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Сегменты аудитории</div>
+                                    </div>
+                                    
+                                    <!-- Переключатели (тоглы) -->
+                                    <div class="audience-toggles">
+                                        <button class="audience-tab active" data-audience="main">
+                                            Основной сегмент
+                                        </button>
+                                        <button class="audience-tab" data-audience="indirect">
+                                            Косвенный сегмент
+                                        </button>
+                                        <button class="audience-tab" data-audience="additional">
+                                            Дополнительный сегмент
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Контент для каждого сегмента -->
+                                    <div class="audience-content active" data-content="main">
+                                        <p><strong>Возраст:</strong> 20–25 лет</p>
+                                        <p><strong>Кто это:</strong> нейроотличные взрослые (РАС, СДВГ, дислексия и др.)</p>
+                                        <p><strong>Ценности:</strong> доверие, индивидуализм, самовыражение, удобство, дружба</p>
+                                        <p><strong>Боли:</strong> неуверенность в себе, боязнь общения, финансовая нестабильность, изоляция</p>
+                                        <p><strong>Потребности:</strong> безопасная среда без масок, понятные правила, сенсорный комфорт</p>
+                                    </div>
+                                    
+                                    <div class="audience-content" data-content="indirect">
+                                        <p><strong>Возраст:</strong> широкий диапазон, ядро 20–25 лет</p>
+                                        <p><strong>Кто это:</strong> родственники, партнёры, друзья нейроотличного человека</p>
+                                        <p><strong>Ценности:</strong> семейное благополучие, крепкие отношения, эмпатия</p>
+                                        <p><strong>Боли:</strong> нехватка знаний о нейроразнообразии, эмоциональное выгорание</p>
+                                        <p><strong>Потребности:</strong> информация, поддержка, понимание, как лучше общаться с близким</p>
+                                    </div>
+                                    
+                                    <div class="audience-content" data-content="additional">
+                                        <p><strong>Возраст:</strong> 27–32 года</p>
+                                        <p><strong>Кто это:</strong> лекторы, менторы, волонтёры, психологи, эксперты, блогеры</p>
+                                        <p><strong>Ценности:</strong> нетворкинг, карьерный рост, волонтёрство, эмпатия</p>
+                                        <p><strong>Боли:</strong> отсутствие платформы для обмена опытом, желание помогать, но нет структуры</p>
+                                        <p><strong>Потребности:</strong> комьюнити единомышленников, возможность делиться знаниями</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Персоны для Основного сегмента (активные по умолчанию) -->
+                            <div class="brand-card persona-card" data-persona-group="main">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Ваня, 22 года</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/vanc.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> нейроотличный, учится на дизайнера, ищет первую работу.</p>
+                                        <p><strong>Боль:</strong> боится собеседований, устаёт от шумных пространств.</p>
+                                        <p><strong>Что даст пространство:</strong> тихую зону для работы, понятные правила, сообщество.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card" data-persona-group="main">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Майя, 24 года</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/1girl.png" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> РАС, работает удалённо, живёт одна, мало общается.</p>
+                                        <p><strong>Боль:</strong> ей трудно знакомиться и поддерживать контакты.</p>
+                                        <p><strong>Что даст пространство:</strong> безопасные мероприятия, дружелюбную атмосферу, место для отдыха.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card" data-persona-group="main">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Павел, 25 лет</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/1man3.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> СДВГ, учится в магистратуре, много проектов.</p>
+                                        <p><strong>Боль:</strong> сложно концентрироваться, отвлекается от шума.</p>
+                                        <p><strong>Что даст пространство:</strong> зоны без отвлечений, гибкий график, поддержку.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Персоны для Косвенного сегмента (скрыты по умолчанию) -->
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="indirect">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Андрей, 23 года</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/2man.png" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> молодой человек нейроотличной девушки, живут вместе.</p>
+                                        <p><strong>Боль:</strong> хочет лучше понять свою партнёршу, но не знает как.</p>
+                                        <p><strong>Что даст пространство:</strong> лекции о нейроразнообразии, группы поддержки, спокойное место для двоих.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="indirect">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Елена, 45 лет</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/2girl2.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> мама нейроотличного подростка, чувствует усталость.</p>
+                                        <p><strong>Боль:</strong> страх за будущее ребёнка, нехватка ресурсов.</p>
+                                        <p><strong>Что даст пространство:</strong> консультации психолога, встречи с другими родителями, передышку.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="indirect">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Дима, 28 лет</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/2man3.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> друг нейроотличного человека с детства.</p>
+                                        <p><strong>Боль:</strong> хочет поддерживать друга, но боится сделать что-то не так.</p>
+                                        <p><strong>Что даст пространство:</strong> обучение, совместные активности, понимающую среду.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Персоны для Дополнительного сегмента (скрыты по умолчанию) -->
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="additional">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Александра, 31 год</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/3girl.png" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> психолог, хочет вести группы в инклюзивном пространстве.</p>
+                                        <p><strong>Боль:</strong> мало мест с подходящей средой для её методик.</p>
+                                        <p><strong>Что даст пространство:</strong> площадку для работы, комьюнити экспертов, доверие.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="additional">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Михаил, 29 лет</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/3man.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> лектор по инклюзии, ведёт просветительские проекты.</p>
+                                        <p><strong>Боль:</strong> сложно найти площадку, готовую к его темам.</p>
+                                        <p><strong>Что даст пространство:</strong> аудиторию, заинтересованную в теме, поддержку организаторов.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card persona-card hidden-persona" data-persona-group="additional">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Ксения, 27 лет</div>
+                                    </div>
+                                    <div class="persona-emoji"><img src="media/3girl3.jpg" alt=""></div>
+                                    <div class="brand-card__description">
+                                        <p><strong>О себе:</strong> волонтёр, хочет помогать нейроотличным людям.</p>
+                                        <p><strong>Боль:</strong> не хватает обучения и поддерживающего сообщества.</p>
+                                        <p><strong>Что даст пространство:</strong> волонтёрскую программу, наставничество, дружескую среду.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- РАЗДЕЛ: миссия -->
-                <div class="section-collapsible" style="margin-top: var(--space-64);">
+                <div class="section-collapsible" id="mission-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
                         <h3>миссия</h3>
                         <button class="section-toggle-btn">
@@ -309,12 +530,87 @@
                         </button>
                     </div>
                     <div class="section-content">
-                        <!-- Здесь будут карточки -->
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Назначение (обычная карточка) -->
+                            <div class="brand-card" id="mission-purpose">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Назначение</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Создавать и развивать инклюзивную среду, где каждый нейроотличный человек может реализовать свой потенциал, чувствуя поддержку и принятие.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2. Долгосрочная цель (широкая карточка, как у слогана) -->
+                            <div class="brand-card brand-card--wide mission-slogan-card" id="mission-goal">
+                                <div class="brand-card__content" style="justify-content: center; align-items: center; text-align: center;">
+                                    <h2 class="mission-slogan-text">сделать инклюзию<br>нормой, а не исключением</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- 3. Видение (обычная карточка) -->
+                            <div class="brand-card" id="mission-vision">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Видение</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Мы видим будущее, где нейроотличия не стигматизируются, а воспринимаются как естественная часть человеческого разнообразия. Где каждый человек имеет доступ к безопасной, понятной и принимающей среде — независимо от особенностей восприятия.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 6. Ценности (детально) — широкая карточка с тогглами -->
+                            <div class="brand-card brand-card--wide brand-card--values-toggles" id="values-toggles-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Ценности — подробнее</div>
+                                    </div>
+                                    
+                                    <div class="values-toggles">
+                                        <button class="values-tab active" data-value="acceptance">Принятие</button>
+                                        <button class="values-tab" data-value="clarity">Понятность</button>
+                                        <button class="values-tab" data-value="respect">Уважение</button>
+                                    </div>
+                                    
+                                    <div class="values-content active" data-value-content="acceptance">
+                                        <p><strong>Принятие</strong> — это фундамент всего пространства. Мы не требуем от человека соответствовать «нормам». Мы верим, что нейроотличие — не дефицит, а особенность. В (в)месте ты можешь не маскироваться, не извиняться за стимминг, не объяснять свои реакции. Мы принимаем тебя целиком.</p>
+                                    </div>
+                                    
+                                    <div class="values-content" data-value-content="clarity">
+                                        <p><strong>Понятность</strong> — мы снижаем когнитивную нагрузку. У нас нет скрытых правил, двусмысленных инструкций или хаотичного пространства. Всё предсказуемо: от навигации до расписания мероприятий. Ты всегда знаешь, что тебя ждёт, и можешь планировать своё время без стресса.</p>
+                                    </div>
+                                    
+                                    <div class="values-content" data-value-content="respect">
+                                        <p><strong>Уважение</strong> — мы не оцениваем, не сравниваем, не заставляем быть «как все». Здесь ценят твои границы, твой темп, твой способ коммуникации. Мы не лечим и не исправляем — мы поддерживаем и создаём пространство, где ты можешь расти в своём ритме.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brand-card" id="mission-purpose"></div>
+                            <!-- 7. Тон общения (обычная карточка) -->
+                            <div class="brand-card" id="mission-tone">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">Тон общения</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p><strong>Амбициозный</strong> — мы говорим о больших изменениях уверенно, без извинений. Мы не просим «понять и простить», мы предлагаем решения.</p>
+                                        <br>
+                                        <p><strong>Доверительный</strong> — мы общаемся честно, без бюрократии и пустых обещаний. Наш голос — это голос партнёра, а не наставника.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brand-card" id="mission-purpose"></div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- РАЗДЕЛ: визуальная стратегия -->
-                <div class="section-collapsible" style="margin-top: var(--space-64);">
+                
+                <div class="section-collapsible" id="visual-strategy-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
                         <h3>визуальная стратегия</h3>
                         <button class="section-toggle-btn">
@@ -324,12 +620,158 @@
                         </button>
                     </div>
                     <div class="section-content">
-                        <!-- Здесь будут карточки -->
+                        
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Визуальная стратегия (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">визуальная стратегия</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Визуальный язык бренда строится на метафоре «быть в месте, где ты свой». Он сочетает понятную типографику, дружелюбные скругления и живые акценты. Доступность не означает скуку — цвета остаются яркими, но работают как сигналы, а не как шум.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2. Декоративная длинная карточка с кружочками и тенью -->
+                          
+                            <div class="brand-card  brand-card--wide brand-card--media brand-card--blue">
+                                <div class="brand-card__media">
+                                    <img src="media/cf.svg" alt="Визуальная стратегия бренда">
+                                </div>
+                            </div>
+                            
+                            <!-- 3. Зелёная карточка (пустая) -->
+                            <div class="brand-card brand-card--green">
+                                <div class="brand-card__content">
+                                    <!-- пусто -->
+                                </div>
+                            </div>
+                            
+                            <!-- 4. Язык бренда (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">язык бренда</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Мы говорим спокойно, но уверенно. Без бюрократии, без жалости, без извинений за свои особенности. Наш тон — доверительный и уважительный, как разговор с другом, который понимает тебя без лишних слов.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 5. Белая карточка (пустая) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <!-- пусто -->
+                                </div>
+                            </div>
+                            
+                            <!-- 6. Тренды (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">тренды</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Визуальная стратегия опирается на актуальные тренды инклюзивного дизайна: сенсорная дружелюбность, предсказуемость интерфейсов, отказ от стереотипных решений. Мы не гонимся за модой — мы создаём среду, где тренд — это доступность.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 7. Тренд №1 (крупный текст) -->
+                            <div class="brand-card trend-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">тренд №1</div>
+                                    </div>
+                                    <div class="trend-large-text">сенсорная<br>дружелюбность</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 8. Тренд №2 (крупный текст) -->
+                            <div class="brand-card trend-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">тренд №2</div>
+                                    </div>
+                                    <div class="trend-large-text">яркий<br>минимализм</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 9. Философия (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">философия</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Пространство не должно заставлять человека подстраиваться. Визуальная философия (в)месте — это отказ от лишнего: лишних цветов, лишних движений, лишней тревожности. Чистота, воздух, порядок. И яркие акценты там, где они действительно нужны.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 10. Эмоциональная окраска (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">эмоциональная окраска</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Бренд вызывает чувство спокойной уверенности. Здесь не кричат, не давят, не осуждают. Цвета и формы работают как мягкое объятие — поддерживают, но не сковывают. При этом в дизайне остаётся место игре и лёгкости, без которой невозможно творчество.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 11. Картинка (медиа) -->
+                            <div class="brand-card brand-card--media">
+                                <div class="brand-card__media">
+                                    <img src="media/manflower.png" alt="Визуальная стратегия бренда">
+                                </div>
+                            </div>
+                            
+                            <!-- 12. Цвет + абзац (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">цвет</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Цветовая система построена на трёх уровнях: белый и чёрный создают контраст и структуру, синий отвечает за действие и навигацию, зелёный — за акценты и живое внимание. Каждый цвет проверен на доступность и может использоваться в паре с другими без потери читаемости.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brand-card brand-card--wide color-strategy-card">
+                                <div class="brand-card__content" style="justify-content: center; align-items: center; text-align: center;">
+                                    <div class="color-strategy-wrapper">
+                                        <div class="color-panel color-panel--main" id="mainColorPanel">
+                                            <span>основной режим</span>
+                                        </div>
+                                        <div class="color-slider-wrapper">
+                                            <input type="range" id="colorSlider" class="color-slider" min="0" max="100" value="50">
+                                            <div class="slider-track-bg"></div>
+                                        </div>
+                                        <div class="color-panel color-panel--sensory" id="sensoryColorPanel">
+                                            <span>приглушённый режим</span>
+                                        </div>
+                                    </div>
+                                    <p class="color-strategy-hint">потяните ползунок → цвет меняется</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Отдельная сетка для длинной карточки с ползунком цвета -->
+                        <!-- Длинная карточка с двумя плашками цвета + ползунок -->
+                        <!-- Широкая карточка стратегии цвета (как у слогана) -->
+                        
+                        
                     </div>
                 </div>
 
                 <!-- РАЗДЕЛ: маркетинг -->
-                <div class="section-collapsible" style="margin-top: var(--space-64);">
+                <div class="section-collapsible" id="marketing-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
                         <h3>маркетинг</h3>
                         <button class="section-toggle-btn">
@@ -339,10 +781,143 @@
                         </button>
                     </div>
                     <div class="section-content">
-                        <!-- Здесь будут карточки -->
+                        
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Основные маркетинговые цели + абзац (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">маркетинговые цели</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Привлечь внимание к теме нейроразнообразия, сформировать устойчивое сообщество вокруг пространства и обеспечить финансовую устойчивость через коммерческие и донатные инструменты.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2. Длинная карточка с тоглами по целям (широкая) -->
+                            <div class="brand-card brand-card--wide marketing-toggles-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">цели маркетинга</div>
+                                    </div>
+                                    
+                                    <div class="marketing-toggles">
+                                        <button class="marketing-tab active" data-marketing="awareness">осведомлённость</button>
+                                        <button class="marketing-tab" data-marketing="community">сообщество</button>
+                                        <button class="marketing-tab" data-marketing="finance">финансы</button>
+                                    </div>
+                                    
+                                    <div class="marketing-content active" data-marketing-content="awareness">
+                                        <p><strong>осведомлённость о нейроразнообразии</strong></p>
+                                        <p>Рассказывать о нейроотличиях без стигмы, через понятные и живые форматы. Показать, что инклюзивное пространство — это не «жалость», а современная, удобная и нужная среда.</p>
+                                    </div>
+                                    
+                                    <div class="marketing-content" data-marketing-content="community">
+                                        <p><strong>формирование устойчивого сообщества</strong></p>
+                                        <p>Создать среду, где нейроотличные люди и их близкие чувствуют себя своими. Регулярные мероприятия, открытые диалоги, поддержка — всё, что превращает посетителей в амбассадоров.</p>
+                                    </div>
+                                    
+                                    <div class="marketing-content" data-marketing-content="finance">
+                                        <p><strong>финансовая устойчивость</strong></p>
+                                        <p>Совмещать коммерческие услуги (аренда, магазин, билеты) с донатами и грантами. Прозрачная отчётность и понятные механики поддержки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 3. Синяя карточка (стандарт, пустая) -->
+                            <div class="brand-card brand-card--blue"></div>
+                            
+                            <!-- 4. Каналы коммуникации + абзац (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">каналы коммуникации</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Мы выбираем платформы, где наша аудитория чувствует себя комфортно: без шума, без навязчивости, с понятной навигацией и уважением к личным границам.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                         <!-- 5. Четыре канала коммуникации с твоими картинками и ссылками -->
+                            <div class="brand-card channels-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">мы здесь</div>
+                                    </div>
+                                    <div class="channels-grid">
+                                        <a href="https://t.me/vmeste_space" class="channel-item" target="_blank" rel="noopener noreferrer">
+                                            <div class="channel-icon">
+                                                <img src="media/icon_telegram.png" alt="Telegram">
+                                            </div>
+                                            <span>Telegram</span>
+                                        </a>
+                                        <a href="https://vk.com/club238383279" class="channel-item" target="_blank" rel="noopener noreferrer">
+                                            <div class="channel-icon">
+                                                <img src="media/icon_vk.png" alt="VK">
+                                            </div>
+                                            <span>VK</span>
+                                        </a>
+                                        <a href="https://dzen.ru/vmeste_space" class="channel-item" target="_blank" rel="noopener noreferrer">
+                                            <div class="channel-icon">
+                                                <img src="media/icon_dzen.png" alt="Дзен">
+                                            </div>
+                                            <span>Дзен</span>
+                                        </a>
+                                        <a href="https://vmeste-three.vercel.app/" class="channel-item">
+                                            <div class="channel-icon">
+                                                <img src="media/icon_site.png" alt="Сайт">
+                                            </div>
+                                            <span>Сайт</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 6. Способы применения визуального стиля в рекламе + абзац (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">визуальный стиль в рекламе</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Яркие акценты, узнаваемые круги и пунктирные линии. Визуальный язык бренда привлекает внимание, оставаясь доступным и не перегружающим.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brand-card brand-card--wide marketing-formats-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">рекламные форматы</div>
+                                    </div>
+                                    
+                                    <div class="formats-toggles">
+                                        <button class="formats-tab active" data-format="bright">яркий стиль</button>
+                                        <button class="formats-tab" data-format="interactive">интерактивный плакат</button>
+                                        <button class="formats-tab" data-format="philosophy">философский подход</button>
+                                    </div>
+                                    
+                                    <div class="formats-content active" data-format-content="bright">
+                                        <p><strong>яркий стиль</strong></p>
+                                        <p>Синий и зелёный — главные акценты. Они привлекают внимание, но не раздражают. Контрастные блоки, динамичные композиции, дружелюбные скругления. Всё это работает на узнаваемость без потери доступности.</p>
+                                    </div>
+                                    
+                                    <div class="formats-content" data-format-content="interactive">
+                                        <p><strong>интерактивный плакат со стикерами</strong></p>
+                                        <p>Офлайн-реклама, которую можно трогать. Стикеры с элементами бренда (круги, стрелки, пунктир) превращают плакат в игру. Люди запоминают не картинку, а действие.</p>
+                                    </div>
+                                    
+                                    <div class="formats-content" data-format-content="philosophy">
+                                        <p><strong>философский подход</strong></p>
+                                        <p>Реклама не продаёт — она приглашает. Никакой жалости, никакого давления. Текст работает мягко, визуал — спокойно. Бренд говорит: «Ты можешь быть собой, мы уже на одной стороне».</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+            
             </div>
         </section>
         
@@ -350,170 +925,1172 @@
         <section id="visual" class="section-visual">
             <div class="layout-section">
                 
-                <h2>Визуал</h2>
-                <div class="section-divider"></div>
+                <h1>Визуал</h1>
                 
-                <!-- ЛОГОТИП -->
-                <div id="logo">
-                    <h3>Логотип</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">(в)месте</div>
-                                <div class="brand-card__description">Полная версия логотипа с названием пространства</div>
-                                <div class="brand-card__example">(в)месте</div>
-                            </div>
-                        </div>
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">(в)месте</div>
-                                <div class="brand-card__description">Черно-белая версия для печати</div>
-                                <div class="brand-card__example">(в)месте</div>
-                            </div>
-                        </div>
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Фавикон</div>
-                                <div class="brand-card__description">Упрощенная версия для маленьких размеров</div>
-                                <div class="brand-card__example">(в)месте</div>
-                            </div>
-                        </div>
+              <!-- РАЗДЕЛ: логотип -->
+                <div class="section-collapsible" id="logo-section" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>логотип</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                </div>
-                
-                <!-- ФИРМЕННЫЕ ЦВЕТА -->
-                <div id="colors">
-                    <h3>Фирменные цвета</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #0077FF;"></div>
-                            <div class="brand-card__title">Primary Blue</div>
-                            <div class="brand-card__description">Основной акцентный цвет бренда</div>
-                            <div class="color-card__hex">#0077FF</div>
-                        </div>
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #0066DA;"></div>
-                            <div class="brand-card__title">Dark Blue</div>
-                            <div class="brand-card__description">Для ховеров и активных состояний</div>
-                            <div class="color-card__hex">#0066DA</div>
-                        </div>
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #EAF4FF;"></div>
-                            <div class="brand-card__title">Light Blue</div>
-                            <div class="brand-card__description">Фоновый цвет для карточек</div>
-                            <div class="color-card__hex">#EAF4FF</div>
-                        </div>
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #BEF655;"></div>
-                            <div class="brand-card__title">Green Accent</div>
-                            <div class="brand-card__description">Акцентный зеленый</div>
-                            <div class="color-card__hex">#BEF655</div>
-                        </div>
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #000000;"></div>
-                            <div class="brand-card__title">Black</div>
-                            <div class="brand-card__description">Основной цвет текста</div>
-                            <div class="color-card__hex">#000000</div>
-                        </div>
-                        <div class="brand-card color-card">
-                            <div class="color-card__preview" style="background-color: #FFFFFF; border: 1px solid #e0e0e0;"></div>
-                            <div class="brand-card__title">White</div>
-                            <div class="brand-card__description">Фоновый цвет</div>
-                            <div class="color-card__hex">#FFFFFF</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ТИПОГРАФИКА -->
-                <div id="typography">
-                    <h3>Типография</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card typo-card">
-                            <div class="brand-card__title">Основной шрифт</div>
-                            <div class="typo-card__preview">Inter Tight</div>
-                            <div class="brand-card__description">Гарнитура с открытым характером</div>
-                            <div class="typo-card__details">Inter Tight, sans-serif</div>
-                        </div>
-                        <div class="brand-card typo-card">
-                            <div class="brand-card__title">H1 — Заголовок</div>
-                            <div class="typo-card__preview">Aa</div>
-                            <div class="brand-card__description">Главный заголовок</div>
-                            <div class="typo-card__details">clamp(54px, 8vw, 128px)</div>
-                        </div>
-                        <div class="brand-card typo-card">
-                            <div class="brand-card__title">Body текст</div>
-                            <div class="typo-card__preview">Аа</div>
-                            <div class="brand-card__description">Основной текст</div>
-                            <div class="typo-card__details">clamp(14px, 1.8vw, 18px)</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ -->
-                <div id="decorative">
-                    <h3>Декоративные элементы</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Пунктирная линия</div>
-                                <div class="brand-card__example">———</div>
+                    <div class="section-content">
+                        
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Логотип + описание (стандарт) -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">логотип</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и названия бренда.</p>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                        </div>
-                        <div class="brand-card">
+
+                             <div class="brand-card brand-card--wide logo-variants-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">варианты логотипа</div>
+                                    </div>
+                                    
+                                    <div class="logo-toggles">
+                                        <button class="logo-tab active" data-logo="full">полный</button>
+                                        <button class="logo-tab" data-logo="horizontal">полный с дескриптором</button>
+                                        <button class="logo-tab" data-logo="vertical">с подложкой</button>
+                                        <button class="logo-tab" data-logo="compact">с подложкой и дескриптером</button>
+                                    </div>
+                                    
+                                    <div class="logo-display">
+                                        <div class="logo-image-wrapper active" data-logo-display="full">
+                                            <img src="media/logo/logo.png" alt="Полный логотип" class="main-logo-img">
+                                            <div class="logo-hover-overlay">
+                                                <img src="media/logo/Plogo.png" alt="Логотип с охранным полем">
+                                            </div>
+                                        </div>
+                                        <div class="logo-image-wrapper" data-logo-display="horizontal">
+                                            <img src="media/logo/poln/polnoe.png" alt="Горизонтальный логотип" class="main-logo-img">
+                                            <div class="logo-hover-overlay">
+                                                <img src="media/logo/poln/P_polnoe.png" alt="Логотип с охранным полем">
+                                            </div>
+                                        </div>
+                                        <div class="logo-image-wrapper" data-logo-display="vertical">
+                                            <img src="media/logo/logo_podlo.png" alt="Вертикальный логотип" class="main-logo-img">
+                                            <div class="logo-hover-overlay">
+                                                <img src="media/logo/Plogo_podlo.png" alt="Логотип с охранным полем">
+                                            </div>
+                                        </div>
+                                        <div class="logo-image-wrapper" data-logo-display="compact">
+                                            <img src="media/logo/poln/polnoe_s_podlo.png" alt="Компактный логотип" class="main-logo-img">
+                                            <div class="logo-hover-overlay">
+                                                <img src="media/logo/poln/Ppolnoe_s_podlo.png" alt="Логотип с охранным полем">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="logo-hint">наведите на логотип, чтобы увидеть охранное поле</p>
+                                </div>
+                            </div>
+                            <div class="brand-card brand-card--wide logo-symbol-card">
                             <div class="brand-card__content">
-                                <div class="brand-card__title">Скругления</div>
-                                <div class="brand-card__description">Система радиусов</div>
-                                <div class="brand-card__example">
-                                    <span class="radius-demo radius-8"></span>
-                                    <span class="radius-demo radius-16"></span>
-                                    <span class="radius-demo radius-24"></span>
+                                <div class="brand-card__header">
+                                    <div class="brand-card__title">сокращённый логотип (знак)</div>
+                                </div>
+                                
+                                <div class="symbol-toggles">
+                                    <button class="symbol-tab active" data-symbol="sign">знак</button>
+                                    <button class="symbol-tab" data-symbol="descriptor">с дескриптором</button>
+                                    <button class="symbol-tab" data-symbol="background">с подложкой</button>
+                                    <button class="symbol-tab" data-symbol="full">с дескриптором и подложкой</button>
+                                </div>
+                                
+                                <div class="symbol-display">
+                                    <div class="symbol-image-wrapper active" data-symbol-display="sign">
+                                        <div class="symbol-img-container">
+                                            <img src="media/logo/zn.png" alt="Знак" class="symbol-img">
+                                            <div class="symbol-hover-overlay">
+                                                <img src="media/logo/znak.png" alt="Охранное поле знака">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="symbol-image-wrapper" data-symbol-display="descriptor">
+                                        <div class="symbol-img-container">
+                                            <img src="media/logo/zn_s_podstroch.png" alt="Знак с дескриптором" class="symbol-img">
+                                            <div class="symbol-hover-overlay">
+                                                <img src="media/logo/Pznak_s_podstr.png" alt="Охранное поле">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="symbol-image-wrapper" data-symbol-display="background">
+                                        <div class="symbol-img-container">
+                                            <img src="media/logo/Pznak_s_podlo.png" alt="Знак с подложкой" class="symbol-img">
+                                            <div class="symbol-hover-overlay">
+                                                <img src="media/logo/Pznak_s_pod.png" alt="Охранное поле">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="symbol-image-wrapper" data-symbol-display="full">
+                                        <div class="symbol-img-container">
+                                            <img src="media/logo/znak_s_pod_s_pod.png" alt="Знак с дескриптором и подложкой" class="symbol-img">
+                                            <div class="symbol-hover-overlay">
+                                                <img src="media/logo/Pznak_s_pod_s_pod.png" alt="Охранное поле">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                                                    
+                             
+                            
+                            <div class="brand-card logo-sizes-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">охранное поле и размеры</div>
+                                    </div>
+                                    <div class="sizes-info">
+                                        <div class="size-item">
+                                            <span class="size-label">минимальный размер</span>
+                                            <span class="size-value">20px</span>
+                                        </div>
+                                        <div class="size-item">
+                                            <span class="size-label">охранное поле</span>
+                                            <span class="size-value">= ширине кружка</span>
+                                        </div>
+                                        <div class="size-item">
+                                            <span class="size-label">рекомендуемый размер</span>
+                                            <span class="size-value">от 40px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        
+                            
+                            <!-- 6. Допустимые цветовые сочетания + абзац -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">допустимые цветовые сочетания</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Логотип может использоваться в синем, белом, чёрном и зелёном цветах. Основная версия — синий на белом фоне. При использовании на тёмном фоне логотип становится белым.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card brand-card--wide logo-colors-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">цветовые вариации</div>
+                                    </div>
+                                    
+                                    <div class="color-toggles">
+                                        <button class="color-tab active" data-color-variant="blue">синий</button>
+                                        <button class="color-tab" data-color-variant="white">голубой</button>
+                                        <button class="color-tab" data-color-variant="black">чёрный</button>
+                                        <button class="color-tab" data-color-variant="green">зелёный</button>
+                                    </div>
+                                    
+                                    <div class="color-variant-display">
+                                        <div class="color-variant active" data-color-display="blue">
+                                            <div class="color-demo-box" >
+                                                <img src="media/logo/Frame 2131328731.png" alt="Синий вариант">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="color-variant" data-color-display="white">
+                                            <div class="color-demo-box" >
+                                                <img src="media/logo/Frame 2131328734.png" alt="Голубой вариант">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="color-variant" data-color-display="black">
+                                            <div class="color-demo-box" >
+                                                <img src="media/logo/Frame 2131328732.png" alt="Чёрный вариант">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="color-variant" data-color-display="green">
+                                            <div class="color-demo-box">
+                                                <img src="media/logo/Frame 2131328733.png" alt="Зелёный вариант">
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">запрещённые модификации</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Нельзя менять пропорции логотипа, поворачивать, добавлять тени, градиенты, обводки, изменять цвета на нефирменные, использовать на неподходящем фоне или отделять элементы друг от друга.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="brand-card brand-card--wide logo-forbidden-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">неправильное использование</div>
+                                    </div>
+                                    
+                                    <div class="forbidden-toggles">
+                                        <button class="forbidden-tab active" data-forbidden="stretch">растяжение</button>
+                                        <button class="forbidden-tab" data-forbidden="rotate">поворот</button>
+                                        <button class="forbidden-tab" data-forbidden="color">чужой цвет</button>
+                                        <button class="forbidden-tab" data-forbidden="shadow">тень и градиент</button>
+                                        <button class="forbidden-tab" data-forbidden="separate">разделение</button>
+                                    </div>
+                                    
+                                    <div class="forbidden-display">
+                                        <div class="forbidden-item-wrapper active" data-forbidden-display="stretch">
+                                            <div class="forbidden-image">
+                                                <img src="media/logo-stretch.svg" alt="Растянутый логотип">
+                                            </div>
+                                            <div class="forbidden-text">
+                                                <p><strong>растяжение</strong></p>
+                                                <p>Нельзя изменять пропорции логотипа. Он должен сохранять исходное соотношение сторон.</p>
+                                            </div>
+                                        </div>
+                                        <div class="forbidden-item-wrapper" data-forbidden-display="rotate">
+                                            <div class="forbidden-image">
+                                                <img src="media/logo-rotate.svg" alt="Повёрнутый логотип">
+                                            </div>
+                                            <div class="forbidden-text">
+                                                <p><strong>поворот</strong></p>
+                                                <p>Логотип нельзя поворачивать, наклонять или отражать. Только горизонтальное расположение.</p>
+                                            </div>
+                                        </div>
+                                        <div class="forbidden-item-wrapper" data-forbidden-display="color">
+                                            <div class="forbidden-image">
+                                                <img src="media/logo-color.svg" alt="Логотип в чужом цвете">
+                                            </div>
+                                            <div class="forbidden-text">
+                                                <p><strong>несанкционированный цвет</strong></p>
+                                                <p>Запрещено использовать цвета, не входящие в фирменную палитру бренда.</p>
+                                            </div>
+                                        </div>
+                                        <div class="forbidden-item-wrapper" data-forbidden-display="shadow">
+                                            <div class="forbidden-image">
+                                                <img src="media/logo-shadow.svg" alt="Логотип с тенью">
+                                            </div>
+                                            <div class="forbidden-text">
+                                                <p><strong>тень и градиент</strong></p>
+                                                <p>Нельзя добавлять тени, градиенты, обводки или другие эффекты к логотипу.</p>
+                                            </div>
+                                        </div>
+                                        <div class="forbidden-item-wrapper" data-forbidden-display="separate">
+                                            <div class="forbidden-image">
+                                                <img src="media/logo-separate.svg" alt="Разделённый логотип">
+                                            </div>
+                                            <div class="forbidden-text">
+                                                <p><strong>разделение элементов</strong></p>
+                                                <p>Запрещено использовать символ и название отдельно друг от друга.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                      
                     </div>
                 </div>
                 
+            <!-- РАЗДЕЛ: фирменные цвета -->
+          
+                <div class="section-collapsible" id="colors-section" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>фирменные цвета</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        
+                        <!-- ОСНОВНЫЕ ЦВЕТА -->
+                        <div class="concept-cards-grid">
+                            
+                            <!-- Карточка-описание: основные цвета + абзац -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">основные цвета</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Цветовая палитра выбрана после анализа конкурентов и потребностей целевой аудитории. Синий и зелёный создают баланс между спокойствием и энергией, а чёрный с белым обеспечивают необходимый контраст для доступности интерфейсов.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Синий (основной) -->
+                            <div class="brand-card color-card-primary" data-color="#0077FF" data-cmyk="100% 52% 0% 0%">
+                                <div class="brand-card__content">
+                                    <div class="color-preview" style="background-color: #0077FF;"></div>
+                                    <div class="color-info">
+                                        <div class="color-name">синий</div>
+                                        <div class="color-hex">#0077FF</div>
+                                        <div class="color-cmyk">CMYK: 100% / 52% / 0% / 0%</div>
+                                        <button class="color-copy-btn" onclick="copyColor(this, '#0077FF')">копировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Голубой (дополнительный основной) -->
+                            <div class="brand-card color-card-primary" data-color="#EAF4FF" data-cmyk="8% 2% 0% 0%">
+                                <div class="brand-card__content">
+                                    <div class="color-preview" style="background-color: #EAF4FF; border: 1px solid var(--gray-300);"></div>
+                                    <div class="color-info">
+                                        <div class="color-name">голубой</div>
+                                        <div class="color-hex">#EAF4FF</div>
+                                        <div class="color-cmyk">CMYK: 8% / 2% / 0% / 0%</div>
+                                        <button class="color-copy-btn" onclick="copyColor(this, '#EAF4FF')">копировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Зелёный -->
+                            <div class="brand-card color-card-primary" data-color="#BEF655" data-cmyk="21% 0% 66% 4%">
+                                <div class="brand-card__content">
+                                    <div class="color-preview" style="background-color: #BEF655;"></div>
+                                    <div class="color-info">
+                                        <div class="color-name">зелёный</div>
+                                        <div class="color-hex">#BEF655</div>
+                                        <div class="color-cmyk">CMYK: 21% / 0% / 66% / 4%</div>
+                                        <button class="color-copy-btn" onclick="copyColor(this, '#BEF655')">копировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Белый -->
+                            <div class="brand-card color-card-primary" data-color="#FFFFFF" data-cmyk="0% 0% 0% 0%">
+                                <div class="brand-card__content">
+                                    <div class="color-preview" style="background-color: #FFFFFF; border: 1px solid var(--gray-300);"></div>
+                                    <div class="color-info">
+                                        <div class="color-name">белый</div>
+                                        <div class="color-hex">#FFFFFF</div>
+                                        <div class="color-cmyk">CMYK: 0% / 0% / 0% / 0%</div>
+                                        <button class="color-copy-btn" onclick="copyColor(this, '#FFFFFF')">копировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Чёрный -->
+                            <div class="brand-card color-card-primary" data-color="#000000" data-cmyk="0% 0% 0% 100%">
+                                <div class="brand-card__content">
+                                    <div class="color-preview" style="background-color: #000000;"></div>
+                                    <div class="color-info">
+                                        <div class="color-name">чёрный</div>
+                                        <div class="color-hex">#000000</div>
+                                        <div class="color-cmyk">CMYK: 0% / 0% / 0% / 100%</div>
+                                        <button class="color-copy-btn" onclick="copyColor(this, '#000000')">копировать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- ПРИГЛУШЁННЫЕ ЦВЕТА -->
+                        <div class="concept-cards-grid" style="margin-top: var(--space-32);">
+                            
+                            <!-- Карточка-описание: приглушённые цвета + абзац -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">приглушённые цвета</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Для пользователей с повышенной сенсорной чувствительностью разработана альтернативная палитра с пониженной насыщенностью. Эти цвета сохраняют узнаваемость бренда, но снижают визуальную нагрузку.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Широкая карточка с приглушёнными цветами -->
+                            <div class="brand-card brand-card--wide muted-colors-card">
+                                <div class="brand-card__content">
+                                    <div class="muted-colors-grid">
+                                        <div class="color-card-muted" data-color="#5A8FBF" data-cmyk="53% 26% 0% 25%">
+                                            <div class="color-preview" style="background-color: #5A8FBF;"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">приглушённый синий</div>
+                                                <div class="color-hex">#5A8FBF</div>
+                                                <div class="color-cmyk">CMYK: 53% / 26% / 0% / 25%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#5A8FBF')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-muted" data-color="#A4D46A" data-cmyk="23% 0% 50% 17%">
+                                            <div class="color-preview" style="background-color: #A4D46A;"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">приглушённый зелёный</div>
+                                                <div class="color-hex">#A4D46A</div>
+                                                <div class="color-cmyk">CMYK: 23% / 0% / 50% / 17%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#A4D46A')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-muted" data-color="#E8F0F5" data-cmyk="5% 2% 0% 4%">
+                                            <div class="color-preview" style="background-color: #E8F0F5; border: 1px solid var(--gray-300);"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">приглушённый белый</div>
+                                                <div class="color-hex">#E8F0F5</div>
+                                                <div class="color-cmyk">CMYK: 5% / 2% / 0% / 4%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#E8F0F5')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-muted" data-color="#3D4A5C" data-cmyk="34% 21% 0% 64%">
+                                            <div class="color-preview" style="background-color: #3D4A5C;"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">приглушённый чёрный</div>
+                                                <div class="color-hex">#3D4A5C</div>
+                                                <div class="color-cmyk">CMYK: 34% / 21% / 0% / 64%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#3D4A5C')">копировать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА -->
+                        <div class="concept-cards-grid" style="margin-top: var(--space-32);">
+                            
+                            <!-- Карточка-описание: дополнительные цвета + абзац -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">дополнительные цвета</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Цвета для фонов, состояний элементов и акцентов. Используются для создания глубины интерфейса и визуальной иерархии.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Широкая карточка с дополнительными цветами -->
+                            <div class="brand-card brand-card--wide extra-colors-card">
+                                <div class="brand-card__content">
+                                    <div class="extra-colors-grid">
+                                        <div class="color-card-extra" data-color="#0066DA" data-cmyk="100% 52% 0% 14%">
+                                            <div class="color-preview" style="background-color: #0066DA;"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">тёмно-синий (hover)</div>
+                                                <div class="color-hex">#0066DA</div>
+                                                <div class="color-cmyk">CMYK: 100% / 52% / 0% / 14%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#0066DA')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-extra" data-color="#8FC93A" data-cmyk="29% 0% 71% 21%">
+                                            <div class="color-preview" style="background-color: #8FC93A;"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">тёмно-зелёный (hover)</div>
+                                                <div class="color-hex">#8FC93A</div>
+                                                <div class="color-cmyk">CMYK: 29% / 0% / 71% / 21%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#8FC93A')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-extra" data-color="#F5F5F5" data-cmyk="0% 0% 0% 4%">
+                                            <div class="color-preview" style="background-color: #F5F5F5; border: 1px solid var(--gray-300);"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">серый (фон)</div>
+                                                <div class="color-hex">#F5F5F5</div>
+                                                <div class="color-cmyk">CMYK: 0% / 0% / 0% / 4%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#F5F5F5')">копировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="color-card-extra" data-color="#E0E0E0" data-cmyk="0% 0% 0% 12%">
+                                            <div class="color-preview" style="background-color: #E0E0E0; border: 1px solid var(--gray-300);"></div>
+                                            <div class="color-info">
+                                                <div class="color-name">светло-серый (рамки)</div>
+                                                <div class="color-hex">#E0E0E0</div>
+                                                <div class="color-cmyk">CMYK: 0% / 0% / 0% / 12%</div>
+                                                <button class="color-copy-btn" onclick="copyColor(this, '#E0E0E0')">копировать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                            
+                <!-- РАЗДЕЛ: типографика -->
+                <div class="section-collapsible" id="typography-section" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>типографика</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Типографика + абзац про выбор шрифта -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">типографика</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Основной шрифт бренда — Inter Tight. Это современный гротеск с открытыми формами, высокой читаемостью и поддержкой кириллицы. Шрифт сохраняет ясность даже в маленьких размерах и на любых носителях.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2. Крупное название шрифта -->
+                            <div class="brand-card font-name-card">
+                                <div class="brand-card__content">
+                                    <div class="font-name-large">Inter Tight</div>
+                                    <div class="font-family-info">Inter Tight, sans-serif</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 3. Декоративная карточка с фоткой -->
+                            <div class="brand-card brand-card--media">
+                                <div class="brand-card__media">
+                                    <img src="media/prl.png" alt="декоративный элемент">
+                                </div>
+                            </div>
+                            
+                            <!-- 4. Алфавит, знаки и цифры -->
+                            <div class="brand-card font-chars-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">алфавит и символы</div>
+                                    </div>
+                                    <div class="chars-display">
+                                        <div class="chars-row uppercase">А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я</div>
+                                        <div class="chars-row lowercase">а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я</div>
+                                        <div class="chars-row digits">0 1 2 3 4 5 6 7 8 9</div>
+                                        <div class="chars-row symbols">! @ # $ % ^ & * ( ) _ + — = { } [ ] | \\ : ; \" ' < > , . ? /</div>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="brand-card brand-card--wide typography-sizes-card">
+                                    <div class="brand-card__content">
+                                        <div class="brand-card__header">
+                                            <div class="brand-card__title">размеры текста</div>
+                                        </div>
+                                        
+                                        <!-- Верхняя строка: тоглы элементов + устройство справа -->
+                                        <div class="size-controls-row">
+                                            <div class="size-elements-toggles">
+                                                <button class="size-element-tab active" data-element="h1">h1</button>
+                                                <button class="size-element-tab" data-element="h2">h2</button>
+                                                <button class="size-element-tab" data-element="h3">h3</button>
+                                                <button class="size-element-tab" data-element="body">body</button>
+                                                <button class="size-element-tab" data-element="nav">nav</button>
+                                                <button class="size-element-tab" data-element="btn-primary">btn primary</button>
+                                                <button class="size-element-tab" data-element="btn-secondary">btn secondary</button>
+                                            </div>
+                                            
+                                            <div class="size-device-wrapper">
+                                                <span class="device-divider">|</span>
+                                                <div class="size-device-toggles">
+                                                    <button class="size-device-tab active" data-device="desktop">десктоп</button>
+                                                    <button class="size-device-tab" data-device="mobile">мобилка</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Область предпросмотра -->
+                                        <div class="size-preview">
+                                            <!-- h1 -->
+                                            <div class="size-example active" data-element="h1" data-device="desktop">
+                                                <h1 class="preview-h1-desktop">вместе</h1>
+                                                <div class="size-spec">clamp(54px, 8vw, 128px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="h1" data-device="mobile">
+                                                <h1 class="preview-h1-mobile">вместе</h1>
+                                                <div class="size-spec">54px / 400 / 100%</div>
+                                            </div>
+                                            <!-- h2 -->
+                                            <div class="size-example" data-element="h2" data-device="desktop">
+                                                <h2 class="preview-h2-desktop">вместе</h2>
+                                                <div class="size-spec">clamp(28px, 3.5vw, 64px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="h2" data-device="mobile">
+                                                <h2 class="preview-h2-mobile">вместе</h2>
+                                                <div class="size-spec">28px / 400 / 100%</div>
+                                            </div>
+                                            <!-- h3 -->
+                                            <div class="size-example" data-element="h3" data-device="desktop">
+                                                <h3 class="preview-h3-desktop">вместе</h3>
+                                                <div class="size-spec">clamp(20px, 2.8vw, 40px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="h3" data-device="mobile">
+                                                <h3 class="preview-h3-mobile">вместе</h3>
+                                                <div class="size-spec">20px / 400 / 100%</div>
+                                            </div>
+                                            <!-- body -->
+                                            <div class="size-example" data-element="body" data-device="desktop">
+                                                <p class="preview-body-desktop">инклюзивное пространство (в)месте</p>
+                                                <div class="size-spec">clamp(16px, 1.8vw, 20px) / 400 / 140%</div>
+                                            </div>
+                                            <div class="size-example" data-element="body" data-device="mobile">
+                                                <p class="preview-body-mobile">инклюзивное пространство (в)месте</p>
+                                                <div class="size-spec">16px / 400 / 140%</div>
+                                            </div>
+                                            <!-- nav -->
+                                            <div class="size-example" data-element="nav" data-device="desktop">
+                                                <div class="preview-nav-desktop">о пространстве / афиша / магазин</div>
+                                                <div class="size-spec">clamp(16px, 2vw, 24px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="nav" data-device="mobile">
+                                                <div class="preview-nav-mobile">о пространстве / афиша / магазин</div>
+                                                <div class="size-spec">16px / 400 / 100%</div>
+                                            </div>
+                                            <!-- btn primary -->
+                                            <div class="size-example" data-element="btn-primary" data-device="desktop">
+                                                <div class="preview-btn-primary-desktop">посетить</div>
+                                                <div class="size-spec">clamp(16px, 2.5vw, 32px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="btn-primary" data-device="mobile">
+                                                <div class="preview-btn-primary-mobile">посетить</div>
+                                                <div class="size-spec">16px / 400 / 100%</div>
+                                            </div>
+                                            <!-- btn secondary -->
+                                            <div class="size-example" data-element="btn-secondary" data-device="desktop">
+                                                <div class="preview-btn-secondary-desktop">узнать больше</div>
+                                                <div class="size-spec">clamp(12px, 1.5vw, 20px) / 400 / 100%</div>
+                                            </div>
+                                            <div class="size-example" data-element="btn-secondary" data-device="mobile">
+                                                <div class="preview-btn-secondary-mobile">узнать больше</div>
+                                                <div class="size-spec">12px / 400 / 100%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+   <!-- 3. Декоративная карточка с фоткой -->
+                            <div class="brand-card brand-card--media">
+                                <div class="brand-card__media">
+                                    <img src="media/кружок.png" alt="декоративный элемент">
+                                </div>
+                            </div>
+
+                            <div class="brand-card brand-card--wide typography-details-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">параметры типографики</div>
+                                    </div>
+                                    
+                                    <div class="typography-details-grid">
+                                        <div class="detail-item">
+                                            <span class="detail-label">начертание</span>
+                                            <span class="detail-value">Regular (400)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">интерлиньяж</span>
+                                            <span class="detail-value">100% (заголовки) / 140% (текст)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">цвет текста</span>
+                                            <span class="detail-value">#000000 (основной) / #0077FF (акцент)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">межбуквенный интервал</span>
+                                            <span class="detail-value">0 (заголовки) / 0.02em (текст)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">высота строки (lh)</span>
+                                            <span class="detail-value">tight: 1.1 / normal: 1.4 / loose: 1.6</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">адаптивность</span>
+                                            <span class="detail-value">clamp() для всех размеров</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>                                               
+                    </div>
+                </div>
+                    
+                <!-- РАЗДЕЛ: декоративные элементы -->
+                <div class="section-collapsible" id="decorative-section" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>декоративные элементы</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        
+                        <div class="concept-cards-grid">
+                            
+                            <!-- 1. Декоративные элементы + абзац -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">декоративные элементы</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Основные декоративные элементы бренда — стрелка, круг и пунктирная линия. Они создают ритм, задают направление и формируют узнаваемый визуальный язык без лишней перегруженности.</p>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="brand-card brand-card--wide decorative-elements-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">элементы и правила использования</div>
+                                    </div>
+                                    
+                                    <div class="decor-toggles">
+                                        <button class="decor-tab active" data-decor="arrow">стрелка</button>
+                                        <button class="decor-tab" data-decor="circle">круги с тенями</button>
+                                        <button class="decor-tab" data-decor="dashed">пунктирная линия</button>
+                                    </div>
+                                    
+                                    <!-- Стрелка -->
+                                    <div class="decor-content active" data-decor-content="arrow">
+                                        <div class="decor-preview arrow-preview">
+                                            <svg width="1960" height="1152" viewBox="0 0 1960 1152" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1959.3 575.942L961.752 1151.88L961.752 675.697L0 675.697L0 476.187L961.752 476.187L961.752 0L1959.3 575.942Z" fill="#0178FF"/>
+                                            </svg>
+                                        </div>
+                                        <div class="decor-description">
+                                            <p><strong>стрелка</strong> — элемент навигации. Используется в кнопках, указателях в пространстве, а также как акцент в композициях. Направление стрелки всегда указывает на действие или движение.</p>
+                                            <ul class="decor-rules">
+                                                <li>толщина линии — 3px</li>
+                                                <li>цвет — фирменный синий или белый (на тёмном фоне)</li>
+                                                <li>не менять пропорции и угол наклона</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Круги с тенями -->
+                                    <div class="decor-content" data-decor-content="circle">
+                                        <div class="decor-preview circle-preview">
+                                            <div class="demo-circle demo-circle-1"></div>
+                                            <div class="demo-circle demo-circle-2"></div>
+                                            <div class="demo-circle demo-circle-3"></div>
+                                        </div>
+                                        <div class="decor-description">
+                                            <p><strong>круги</strong> — символ единства и целостности. Используются как фоновые акценты, в паттернах и декоративных композициях. Тени создают эффект глубины.</p>
+                                            <ul class="decor-rules">
+                                                <li>цвет — фирменный синий, зелёный или белый</li>
+                                                <li>размер варьируется от 40px до 200px</li>
+                                                <li>тени — внешние, мягкие</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Пунктирная линия -->
+                                    <div class="decor-content" data-decor-content="dashed">
+                                        <div class="decor-preview dashed-preview">
+                                            <div class="demo-dashed-line"></div>
+                                        </div>
+                                        <div class="decor-description">
+                                            <p><strong>пунктирная линия</strong> — разделитель и акцент. Используется для структурирования информации, создания ритма и визуальных пауз.</p>
+                                            <ul class="decor-rules">
+                                                <li>соотношение: 9px синего, 9px прозрачного</li>
+                                                <li>толщина — 2px</li>
+                                                <li>только горизонтальное или вертикальное расположение</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">фотостиль</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Фотографии — живые, естественные, без постановочных кадров. Люди на фото не позируют, а живут: работают, общаются, отдыхают. Главное — искренность и отсутствие стигматизации.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 4. Эмоциональный портрет -->
+                            <div class="brand-card brand-card--media portrait-card">
+                                <div class="brand-card__media">
+                                    <img src="media/tw7.jpg" alt="Эмоциональный портрет">
+                                </div>
+                                <div class="portrait-caption">естественность и тепло</div>
+                            </div>
+                            
+                            <div class="brand-card brand-card--media interior-card">
+                                <div class="brand-card__media">
+                                    <img src="media/prostltst.png" alt="Фотография пространства">
+                                </div>
+                                <div class="interior-caption">пространство без постановки</div>
+                            </div> 
+
+                            <div class="brand-card brand-card--media interior-card">
+                                <div class="brand-card__media">
+                                    <img src="media/manflowerblue.png" alt="Фотография пространства">
+                                </div>
+                               
+                            </div> 
+                            
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">иллюстрации</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Иллюстрации выполнены в технике коллажа и аппликации. Простые геометрические формы, наложение, дружелюбные персонажи. Визуальный язык — понятный, тёплый, без лишних деталей.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 7. Карточка с несколькими иллюстрациями (скролл) -->
+                            <div class="brand-card illustrations-scroll-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">примеры иллюстраций</div>
+                                    </div>
+                                    <div class="illustrations-scroll">
+                                        <div class="illustration-item">
+                                            <img src="media/domik.png" alt="Иллюстрация 1">
+                                        </div>
+                                        <div class="illustration-item">
+                                            <img src="media/stul.png" alt="Иллюстрация 2">
+                                        </div>
+                                        <div class="illustration-item">
+                                            <img src="media/manflower.png" alt="Иллюстрация 3">
+                                        </div>
+                                        <div class="illustration-item">
+                                            <img src="media/foto.png" alt="Иллюстрация 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            
+                            <div class="brand-card brand-card--wide composition-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">композиция из элементов</div>
+                                    </div>
+                                    <div class="composition-grid">
+                                        <div class="composition-demo">
+                                            <img src="media/а0.png" alt="Пример композиции">
+                                        </div>
+                                        <div class="composition-text">
+                                            <p><strong>правила использования</strong></p>
+                                            <p>Элементы не должны перегружать композицию. Достаточно 1-2 акцентов на макет. Круги и стрелки задают движение, пунктирная линия — структуру.</p>
+                                            <p><strong>описание</strong></p>
+                                            <p>Композиция строится по принципу «ритм и пауза». Круги создают объём, стрелки направляют взгляд, пунктир разделяет зоны.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="brand-card brand-card--media composition-example-card">
+                                <div class="brand-card__media">
+                                    <img src="media/май.png" alt="Пример композиции">
+                                </div>
+                            </div>
+                            
+                        </div>                                                    
+                    </div>
+                </div>
+                                
                 <!-- ВНУТРЕННИЕ НОСИТЕЛИ -->
-                <div id="internal-media">
-                    <h3>Внутренние носители</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Презентации</div>
-                                <div class="brand-card__example">📊</div>
+                <div class="section-collapsible" id="internal-media" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>внутренние носители</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="concept-cards-grid">
+
+                            <!-- Карточка-описание -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">внутренние носители</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Внутренние носители обеспечивают единство бренда внутри пространства: навигация, рабочие материалы, форменная одежда и элементы среды. Все они следуют правилам фирменного стиля и создают целостную визуальную среду для команды и посетителей.</p>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Майка (внутренняя) -->
+                            <div class="brand-card media-item-card"
+                                data-title="майка"
+                                data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                data-material="Хлопок 100%, оверсайз"
+                                data-color-list="green"
+                                data-colors-map="green:media/maikv.png"
+                                data-layouts-map="green:media/MMAIK7.png"
+                                >
+                                <img class="media-item__img" src="media/maikv.png" alt="майка">
+                                <span class="media-item__label">майка</span>
+                            </div>
+
+                          
+
+                            <!-- Вход -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="internal-3"
+                                 data-title="вход"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Виниловая плёнка, стекло"
+                                 data-colors-map="green:media/vhod.png"
+                                 data-layouts-map="green:media/MVHOD.png">
+                                <img class="media-item__img" src="media/vhod.png" alt="вход">
+                                <span class="media-item__label">вход</span>
+                            </div>
+
+                            <!-- Навигация -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="internal-4"
+                                 data-title="навигация"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Оргстекло, УФ-печать"
+                                 data-colors-map="green:media/navig.png"
+                                 data-layouts-map="green:media/MNAV.png">
+                                <img class="media-item__img" src="media/navig.png" alt="навигация">
+                                <span class="media-item__label">навигация</span>
+                            </div>
+
+                            <!-- Бейдж 2 -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="internal-5"
+                                 data-title="бланк"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Картон, ламинация"
+                                 data-colors="#FFFFFF,#0077FF,#000000"
+                                 data-colors-map="green:media/OT1A901.png"
+                                 data-layouts-map="green:media/OT1A9012.png">
+                                 
+                                <img class="media-item__img" src="media/OT1A901.png" alt="бейдж">
+                                <span class="media-item__label">бланк</span>
+                            </div>
+
                         </div>
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Гугл-документы</div>
-                                <div class="brand-card__example">📄</div>
+                    </div>
+                </div>
+
+                <!-- ВНЕШНИЕ НОСИТЕЛИ -->
+                <div class="section-collapsible" id="external-media" style="margin-top: var(--space-64);">
+                    <div class="section-header">
+                        <h3>внешние носители</h3>
+                        <button class="section-toggle-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div class="concept-cards-grid">
+
+                            <!-- Карточка-описание -->
+                            <div class="brand-card">
+                                <div class="brand-card__content">
+                                    <div class="brand-card__header">
+                                        <div class="brand-card__title">внешние носители</div>
+                                    </div>
+                                    <div class="brand-card__description">
+                                        <p>Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Жмякалка -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-1"
+                                 data-title="жмякалка"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Полиуретан, силикон"
+                                 data-colors-map="green:media/gm.png"
+                                 data-layouts-map="green:media/MSKV.png">
+                                <img class="media-item__img" src="media/gm.png" alt="жмякалка">
+                                <span class="media-item__label">жмякалка</span>
+                            </div>
+
+                            <!-- Майка (внешняя) -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-2"
+                                 data-title="майка"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Хлопок 100%, оверсайз"
+                                 data-colors="#000000,#BEF655,#FFFFFF"
+                                 data-colors-map="green:media/maibl.png"
+                                 data-layouts-map="green:media/MMAIKA2.png">
+                                <img class="media-item__img" src="media/maibl.png" alt="майка">
+                                <span class="media-item__label">майка</span>
+                            </div>
+
+                            <!-- Шопер -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-3"
+                                 data-title="шопер"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Хлопок, шелкография"
+                                 data-colors-map="green:media/shoper.png"
+                                 data-layouts-map="green:media/MSHOPER.png">
+                                <img class="media-item__img" src="media/shoper.png" alt="шопер">
+                                <span class="media-item__label">шопер</span>
+                            </div>
+
+                            <!-- Блокнот -->
+                            <div class="brand-card media-item-card"
+                                data-title="блокнот"
+                                data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                data-material="Картон, листы в точку"
+                                data-colors-map="blue:media/blb.png,green:media/blg.png,white:media/bllb.png"
+                                data-layouts-map="blue:media/MBL.png,green:media/MBL.png,white:media/MBL.png"
+                                data-color-list="blue,green,white">
+                                <img class="media-item__img" src="media/bloknot.png" alt="блокнот">
+                                <span class="media-item__label">блокнот</span>
+                            </div>
+
+                            <!-- Браслет -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-5"
+                                 data-title="брелок"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="полимерная глина, пластик"
+                                 data-colors-map="green:media/brelok3.png"
+                                 data-layouts-map="green:media/MBREL.png">
+                                <img class="media-item__img" src="media/brelok3.png" alt="брелок">
+                                <span class="media-item__label">брелок</span>
+                            </div>
+
+                            <!-- Ноутбук -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-6"
+                                 data-title="веб-сайт"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Виниловая наклейка"
+                                 data-colors="#BEF655,#0077FF,#000000"
+                                 data-colors-map="green:media/site6.png"
+                                 data-layouts-map="green:media/MBREL.png">
+                                <img class="media-item__img" src="media/site6.png" alt="сайт">
+                                <span class="media-item__label">веб-сайт</span>
+                            </div>
+
+                            <!-- Телефон -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-7"
+                                 data-title="вк сообщество"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Цифровой макет"
+                                 data-colors-map="green:media/вк.png"
+                                 data-layouts-map="green:media/MBREL.png">
+                                <img class="media-item__img" src="media/вк.png" alt="vk">
+                                <span class="media-item__label">вк сообщество</span>
+                            </div>
+
+                            <!-- Баннер -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-8"
+                                 data-title="плакат"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Баннерная ткань, печать"
+                                 data-colors-map="green:media/plakat.png"
+                                 data-layouts-map="green:media/MBREL.png">
+                                <img class="media-item__img" src="media/plakat.png" alt="баннер">
+                                <span class="media-item__label">плакат</span>
+                            </div>
+
+                            <!-- Листовки -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-9"
+                                 data-title="плакат"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Мелованная бумага, 130 г/м²"
+                                 data-colors-map="green:media/plakat5.png"
+                                 data-layouts-map="green:media/MBREL.png">
+                                <img class="media-item__img" src="media/plakat5.png" alt="листовки">
+                                <span class="media-item__label">плакат</span>
+                            </div>
+
+                            <!-- Худи -->
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-10"
+                                 data-title="бирка"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Хлопок с начёсом, флексопечать"
+                                 data-colors-map="green:media/birk7.png"
+                                 data-layouts-map="green:media/MBIRK.png">
+                                <img class="media-item__img" src="media/birk7.png" alt="худи">
+                                <span class="media-item__label">бирка</span>
+                            </div>
+
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-11"
+                                 data-title="майка"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Хлопок 100%, оверсайз"
+                                 data-colors-map="green:media/Shirt.png"
+                                 data-layouts-map="green:media/MMAIKA2.png">
+                                <img class="media-item__img" src="media/Shirt.png" alt="майка">
+                                <span class="media-item__label">майка</span>
+                            </div>
+
+                            <div class="brand-card media-item-card"
+                                 data-modal="external-12"
+                                 data-title="визитка"
+                                 data-desc="Логотип состоит из двух основных элементов, расположенных в горизонтальной композиции: символа и название бренда."
+                                 data-material="Хлопок 100%, оверсайз"
+                                 data-colors-map="green:media/visit.png"
+                                 data-layouts-map="green:media/MVIS.png">
+                                <img class="media-item__img" src="media/visit.png" alt="майка">
+                                <span class="media-item__label">визитка</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- ВНЕШНИЕ НОСИТЕЛИ -->
-                <div id="external-media">
-                    <h3>Внешние носители</h3>
-                    <div class="cards-grid">
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Социальные сети</div>
-                                <div class="brand-card__example">📱</div>
+
+                <!-- МОДАЛЬНОЕ ОКНО ДЛЯ НОСИТЕЛЕЙ -->
+                <div class="carrier-modal" id="carrierModal" role="dialog" aria-modal="true" aria-labelledby="carrierModalTitle">
+                    <div class="carrier-modal__backdrop" id="carrierModalBackdrop"></div>
+                    <div class="carrier-modal__dialog">
+                        <div class="carrier-modal__header">
+                            <span class="carrier-modal__title" id="carrierModalTitle"></span>
+                            <button class="carrier-modal__close" id="carrierModalClose" aria-label="Закрыть">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="carrier-modal__body">
+                            <div class="carrier-modal__photo">
+                                <img id="carrierModalImg" src="" alt="">
+                            </div>
+                            <div class="carrier-modal__info">
+                                <p class="carrier-modal__desc" id="carrierModalDesc"></p>
+                                <div class="carrier-modal__meta">
+                                    <span class="carrier-modal__meta-label" id="carrierModalMetaLabel">Материал</span>
+                                    <span class="carrier-modal__meta-value" id="carrierModalMetaValue"></span>
+                                </div>
+                                <div class="carrier-modal__colors" id="carrierModalColors"></div>
+                                <div class="carrier-modal__actions">
+                                    <button class="carrier-modal__btn-mockup" id="carrierModalMockupBtn">мокап</button>
+                                    <button class="carrier-modal__btn-layout" id="carrierModalLayoutBtn">макет</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Сайт</div>
-                                <div class="brand-card__example">🌐</div>
-                            </div>
-                        </div>
-                        <div class="brand-card">
-                            <div class="brand-card__content">
-                                <div class="brand-card__title">Печатная продукция</div>
-                                <div class="brand-card__example">📖</div>
-                            </div>
-                        </div>
+                        <div class="carrier-modal__thumbs" id="carrierModalThumbs"></div>
                     </div>
                 </div>
             </div>
@@ -521,7 +2098,6 @@
     </main>
 </div>
 
-<!-- КНОПКА ОТКРЫТИЯ САЙДБАРА (ГАМБУРГЕР) -->
 <!-- КНОПКА ОТКРЫТИЯ САЙДБАРА (ГАМБУРГЕР) -->
 <button class="sidebar-toggle" id="sidebarToggle">
     <svg width="57" height="33" viewBox="0 0 57 33" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -34,7 +34,6 @@
   border-radius: var(--radius-full);
 }
 
-/* Кнопка закрытия сайдбара (крестик) */
 .sidebar__close {
   display: flex;
   justify-content: flex-end;
@@ -68,7 +67,6 @@
   stroke: var(--gray-700);
 }
 
-/* Навигация */
 .sidebar__nav {
   display: flex;
   flex-direction: column;
@@ -91,12 +89,10 @@
   border-radius: var(--radius-full);
 }
 
-/* ===== РАЗДЕЛЫ МЕНЮ ===== */
 .sidebar__section {
   margin-bottom: 0;
 }
 
-/* Заголовки разделов (Концепция, Визуал) */
 .sidebar__section-title {
   display: block;
   font-size: 54px;
@@ -108,7 +104,6 @@
   padding: 0;
 }
 
-/* Концепция — ЧЁРНЫЙ текст */
 .sidebar__section-title--concept {
   color: var(--black);
 }
@@ -117,7 +112,6 @@
   opacity: 0.7;
 }
 
-/* Визуал — чёрный текст */
 .sidebar__section-title--visual {
   color: var(--black);
 }
@@ -126,7 +120,6 @@
   opacity: 0.7;
 }
 
-/* Подразделы */
 .sidebar__subnav {
   display: flex;
   flex-direction: column;
@@ -144,7 +137,6 @@
   transition: all var(--transition-fast);
 }
 
-/* Подразделы Концепции — ЧЁРНЫЕ */
 .sidebar__section--concept .sidebar__subnav-item {
   color: var(--black);
 }
@@ -153,7 +145,6 @@
   opacity: 0.7;
 }
 
-/* Подразделы Визуала — чёрные */
 .sidebar__section--visual .sidebar__subnav-item {
   color: var(--black);
 }
@@ -162,7 +153,6 @@
   opacity: 0.7;
 }
 
-/* Активный подраздел — зелёное выделение как маркер */
 .sidebar__subnav-item.active {
   background-color: var(--green);
   padding: var(--space-4) 0.5em;
@@ -172,7 +162,6 @@
   font-weight: var(--fw-regular);
 }
 
-/* Футер сайдбара */
 .sidebar__footer {
   margin-top: auto;
   padding-top: var(--space-24);
@@ -182,7 +171,6 @@
   flex-shrink: 0;
 }
 
-/* ===== КНОПКА ОТКРЫТИЯ САЙДБАРА (гамбургер) ===== */
 .sidebar-toggle {
   position: fixed;
   bottom: var(--space-24);
@@ -208,7 +196,20 @@
   transform: scale(1.05);
 }
 
-/* ===== АДАПТИВ ДЛЯ ПЛАНШЕТА/МОБИЛКИ ===== */
+.sidebar__divider {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--blue) 0px,
+    var(--blue) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  flex-shrink: 0;
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
 @media (max-width: 1156px) {
   .sidebar {
     position: fixed;
@@ -241,17 +242,30 @@
   }
 }
 
-/* ===== РАЗДЕЛИТЕЛЬ МЕЖДУ РАЗДЕЛАМИ ===== */
-.sidebar__divider {
-  width: 100%;
-  height: 2px;
-  background: repeating-linear-gradient(
-    to right,
-    var(--blue) 0px,
-    var(--blue) 8px,
-    transparent 8px,
-    transparent 16px
-  );
+@media (max-width: 756px) {
+  .sidebar {
+    width: 100% !important;
+  }
   
-  flex-shrink: 0;
+  .sidebar__inner {
+    padding: var(--space-24);
+  }
+  
+  .sidebar__section-title {
+    font-size: 40px;
+  }
+  
+  .sidebar__subnav-item {
+    font-size: 18px;
+  }
+  
+  .sidebar-toggle {
+    left: var(--space-16);
+    bottom: var(--space-16);
+  }
+  
+  .sidebar.is-open-mobile ~ .sidebar-toggle {
+    left: auto;
+    right: var(--space-16);
+  }
 }
