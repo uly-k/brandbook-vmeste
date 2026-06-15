@@ -22,7 +22,7 @@
     
     <div class="hero__content">
         <h2 class="brandbook-hero__title">
-            цифровое руководство<br>бренда
+            цифровое руководство бренда
         </h2>
 
         <button class="btn btn--primary brandbook-hero__btn" onclick="document.getElementById('concept').scrollIntoView({ behavior: 'smooth', block: 'start' });">
@@ -930,7 +930,7 @@
               <!-- РАЗДЕЛ: логотип -->
                 <div class="section-collapsible" id="logo-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
-                        <h3>логотип</h3>
+                        <h3 id="logo">логотип</h3>
                         <button class="section-toggle-btn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1154,45 +1154,30 @@
                                     
                                     <div class="forbidden-display">
                                         <div class="forbidden-item-wrapper active" data-forbidden-display="stretch">
-                                            <div class="forbidden-image">
-                                                <img src="media/logo-stretch.svg" alt="Растянутый логотип">
-                                            </div>
                                             <div class="forbidden-text">
                                                 <p><strong>растяжение</strong></p>
                                                 <p>Нельзя изменять пропорции логотипа. Он должен сохранять исходное соотношение сторон.</p>
                                             </div>
                                         </div>
                                         <div class="forbidden-item-wrapper" data-forbidden-display="rotate">
-                                            <div class="forbidden-image">
-                                                <img src="media/logo-rotate.svg" alt="Повёрнутый логотип">
-                                            </div>
                                             <div class="forbidden-text">
                                                 <p><strong>поворот</strong></p>
                                                 <p>Логотип нельзя поворачивать, наклонять или отражать. Только горизонтальное расположение.</p>
                                             </div>
                                         </div>
                                         <div class="forbidden-item-wrapper" data-forbidden-display="color">
-                                            <div class="forbidden-image">
-                                                <img src="media/logo-color.svg" alt="Логотип в чужом цвете">
-                                            </div>
                                             <div class="forbidden-text">
                                                 <p><strong>несанкционированный цвет</strong></p>
                                                 <p>Запрещено использовать цвета, не входящие в фирменную палитру бренда.</p>
                                             </div>
                                         </div>
                                         <div class="forbidden-item-wrapper" data-forbidden-display="shadow">
-                                            <div class="forbidden-image">
-                                                <img src="media/logo-shadow.svg" alt="Логотип с тенью">
-                                            </div>
                                             <div class="forbidden-text">
                                                 <p><strong>тень и градиент</strong></p>
                                                 <p>Нельзя добавлять тени, градиенты, обводки или другие эффекты к логотипу.</p>
                                             </div>
                                         </div>
                                         <div class="forbidden-item-wrapper" data-forbidden-display="separate">
-                                            <div class="forbidden-image">
-                                                <img src="media/logo-separate.svg" alt="Разделённый логотип">
-                                            </div>
                                             <div class="forbidden-text">
                                                 <p><strong>разделение элементов</strong></p>
                                                 <p>Запрещено использовать символ и название отдельно друг от друга.</p>
@@ -1209,7 +1194,7 @@
           
                 <div class="section-collapsible" id="colors-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
-                        <h3>фирменные цвета</h3>
+                        <h3 id="colors">фирменные цвета</h3>
                         <button class="section-toggle-btn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1428,7 +1413,7 @@
                 <!-- РАЗДЕЛ: типографика -->
                 <div class="section-collapsible" id="typography-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
-                        <h3>типографика</h3>
+                        <h3 id="typography">типографика</h3>
                         <button class="section-toggle-btn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1625,7 +1610,7 @@
                 <!-- РАЗДЕЛ: декоративные элементы -->
                 <div class="section-collapsible" id="decorative-section" style="margin-top: var(--space-64);">
                     <div class="section-header">
-                        <h3>декоративные элементы</h3>
+                        <h3 id="decorative">декоративные элементы</h3>
                         <button class="section-toggle-btn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

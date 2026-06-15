@@ -2189,6 +2189,203 @@
     }
 }
 
+/* ===== ЦВЕТОВЫЕ ВАРИАЦИИ ЛОГОТИПА ===== */
+.logo-colors-card {
+    min-height: 450px;
+}
+
+.color-toggles {
+    display: flex;
+    gap: var(--space-8);
+    margin-bottom: var(--space-24);
+    flex-wrap: wrap;
+}
+
+.color-tab {
+    flex: 0 1 auto;
+    padding: var(--space-8) var(--space-20);
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-size: var(--body-small);
+    font-weight: var(--fw-regular);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.color-tab:hover {
+    background-color: var(--light-blue);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.color-tab.active {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+.color-variant-display {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--space-16);
+    flex-wrap: wrap;
+    min-height: 200px;
+}
+
+.color-variant {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-12);
+    text-align: center;
+    flex: 1;
+}
+
+.color-variant.active {
+    display: flex;
+}
+
+.color-demo-box {
+    width: 180px;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+}
+
+.color-demo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.color-variant p {
+    font-size: var(--body-small);
+    color: var(--gray-700);
+    margin: 0;
+}
+
+/* Адаптация */
+@media (max-width: 756px) {
+    .color-demo-box {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ===== ЗАПРЕЩЁННЫЕ МОДИФИКАЦИИ ЛОГОТИПА ===== */
+.logo-forbidden-card {
+    min-height: 380px;
+}
+
+.forbidden-toggles {
+    display: flex;
+    gap: var(--space-8);
+    margin-bottom: var(--space-24);
+    flex-wrap: wrap;
+}
+
+.forbidden-tab {
+    flex: 0 1 auto;
+    padding: var(--space-8) var(--space-20);
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-size: var(--body-small);
+    font-weight: var(--fw-regular);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.forbidden-tab:hover {
+    background-color: var(--light-blue);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.forbidden-tab.active {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+.forbidden-display {
+    min-height: 150px;
+    margin-top: var(--space-16);
+}
+
+.forbidden-item-wrapper {
+    display: none;
+}
+
+.forbidden-item-wrapper.active {
+    display: block;
+}
+
+.forbidden-text p {
+    margin-bottom: var(--space-12);
+    font-size: var(--body-small);
+    line-height: var(--lh-loose);
+}
+
+.forbidden-text strong {
+    color: var(--blue);
+}
+
+/* Адаптация */
+@media (max-width: 756px) {
+    .forbidden-tab {
+        padding: var(--space-4) var(--space-12);
+        font-size: 12px;
+    }
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ (до 756px) ===== */
+@media (max-width: 756px) {
+    
+    /* Шрифт Inter Tight для всех карточек */
+    .brand-card,
+    .brand-card * {
+        font-family: var(--font-primary) !important;
+    }
+    
+    /* Карточки с фотографиями (кроме носителей) — фото на всю карточку без паддингов и границ */
+    .brand-card--media:not(.media-item-card) {
+        padding: 0 !important;
+        border: none !important;
+        overflow: hidden;
+    }
+    
+    .brand-card--media:not(.media-item-card) .brand-card__media {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .brand-card--media:not(.media-item-card) .brand-card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    /* Убираем лишние отступы у карточек с фото */
+    .brand-card--media:not(.media-item-card) .brand-card__content {
+        padding: 0;
+    }
+}
+
 /* ===== HERO БЛОК БРЕНДБУКА ===== */
 .brandbook-hero {
   position: relative;
@@ -2224,14 +2421,15 @@
 
 /* Кнопка */
 .brandbook-hero .btn--primary {
-  background-color: var(--blue);
+  background-color: var(--black);
   color: var(--white);
   border-radius: var(--radius-full);
-  padding: var(--space-16) var(--space-32);
+  padding: var(--space-16) var(--space-16);
   font-size: var(--h4);
   transition: all var(--transition-normal);
   cursor: pointer;
   border: none;
+  width: 260px;
 }
 
 .brandbook-hero .btn--primary:hover {
@@ -2367,12 +2565,14 @@
 
 @media (max-width: 756px) {
   .brandbook-hero .hero__content {
-    margin-top: 80px;
+    margin-top: 40px;
     gap: 40px;
   }
 
   .brandbook-hero__title {
     font-size: var(--h4);
+    margin-top: 10px;
+
   }
 
   .brandbook-hero .hero__circle {
@@ -2402,6 +2602,9 @@
 
   .brandbook-hero .btn--primary {
     padding: 8px 24px;
-    font-size: var(--body-small);
+    font-size: var(--h3);
+    height: 50px;
+    margin-top: 460px;
+    
   }
 }
